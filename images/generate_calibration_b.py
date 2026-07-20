@@ -235,8 +235,8 @@ def text_chart(
         (20, "0123456789  abcdefghijklmnopqrstuvwxyz"),
         (24, "ID: 310101199001011234  Account: 6222 0000 1234 5678"),
         (32, "0 1 2 3 4 5 6 7 8 9"),
-        (40, "Shouldersurfing Smart Glass"),
-        (48, "隐私信息测试  身份证  银行账户  密码"),
+        (40, "The quick brown fox jumps over 0123456789"),
+        (48, "中文字符样例  一二三四  五六七八  九十"),
         (64, "Aa Bb 0123 测试"),
         (80, "0123456789"),
     ]
