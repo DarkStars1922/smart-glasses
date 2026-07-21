@@ -205,6 +205,10 @@ def test_writes_deterministic_results_and_diagnostics(
     assert "69 mm" in report
     assert "JPEG quality 96" in report
     assert "下一轮拍摄" in report
+    assert "\\mathcal W" in report
+    assert "单亮点扫描" in report
+    assert "RAW/DNG + JPEG" in report
+    assert "不可识别的参数" in report
     diagnostics = list((first / "v1_diagnostics").glob("*.png"))
     assert len([path for path in diagnostics if path.name.startswith("roi_")]) == 12
     assert len([path for path in diagnostics if path.name.startswith("comparison_")]) >= 2
