@@ -7,8 +7,8 @@ import numpy as np
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 
-WIDTH = 2515
-HEIGHT = 1491
+WIDTH = 2500
+HEIGHT = 1600
 SIZE = (WIDTH, HEIGHT)
 OUTPUT_DIR = Path(__file__).parent / "origin" / "calibration_B"
 
