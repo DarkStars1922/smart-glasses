@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from functools import lru_cache
-import hashlib
 from io import BytesIO
 import math
 from pathlib import Path
@@ -621,13 +620,6 @@ def _numeric(tags: Mapping[str, Any], key: str) -> float | None:
     return float(value) if value is not None else None
 
 
-def _qtable_digest(quantization: Mapping[int, Sequence[int]]) -> str:
-    payload = repr(
-        tuple((key, tuple(values)) for key, values in sorted(quantization.items()))
-    ).encode("ascii")
-    return hashlib.sha256(payload).hexdigest()
-
-
 @lru_cache(maxsize=1)
 def _standard_qtables() -> dict[int, Mapping[int, Sequence[int]]]:
     tables: dict[int, Mapping[int, Sequence[int]]] = {}
@@ -666,7 +658,9 @@ def inspect_jpeg(path: Path) -> dict[str, Any]:
         sampling_code, f"unknown:{sampling_code}"
     )
     return {
-        "qtable_sha256": _qtable_digest(quantization),
+        "quantization_signature": tuple(
+            (key, tuple(values)) for key, values in sorted(quantization.items())
+        ),
         "equivalent_quality": _equivalent_quality(quantization),
         "subsampling": sampling,
     }
@@ -840,10 +834,10 @@ def _effective_domain_parameters(
 def fit_manifest(manifest: CalibrationManifest, *, seed: int) -> dict[str, Any]:
     del seed  # Reserved for deterministic bootstrap resampling and synthesis diagnostics.
     jpeg_rows = [inspect_jpeg(frame) for group in manifest.groups for frame in group.frames]
-    digests = {row["qtable_sha256"] for row in jpeg_rows}
+    quantization_signatures = {row["quantization_signature"] for row in jpeg_rows}
     qualities = {row["equivalent_quality"] for row in jpeg_rows}
     samplings = {row["subsampling"] for row in jpeg_rows}
-    if len(digests) != 1 or len(qualities) != 1 or len(samplings) != 1:
+    if len(quantization_signatures) != 1 or len(qualities) != 1 or len(samplings) != 1:
         raise ValueError("dataset mixes JPEG quantization or subsampling settings")
 
     domains: dict[str, Any] = {}
@@ -885,7 +879,6 @@ def fit_manifest(manifest: CalibrationManifest, *, seed: int) -> dict[str, Any]:
                 "group_count": len(manifest.groups),
                 "frame_count": sum(len(group.frames) for group in manifest.groups),
                 "jpeg": {
-                    "qtable_sha256": next(iter(digests)),
                     "equivalent_quality": next(iter(qualities)),
                     "subsampling": next(iter(samplings)),
                 },

@@ -198,7 +198,6 @@ def _markdown_report(result: Mapping[str, Any]) -> str:
         "",
         f"- Groups: `{result['dataset']['group_count']}`; frames: `{result['dataset']['frame_count']}`.",
         f"- JPEG quality {jpeg['equivalent_quality']}; chroma subsampling `{jpeg['subsampling']}`.",
-        f"- Quantization-table SHA-256: `{jpeg['qtable_sha256']}`.",
         "",
     ]
     for domain_name, domain in result["domains"].items():

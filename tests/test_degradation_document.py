@@ -41,3 +41,11 @@ def test_document_contains_complete_model_and_identifiability_sections() -> None
     assert "单亮点扫描" in document
     assert "RAW/DNG + JPEG" in document
     assert "特征级多帧融合识别模型" in document
+
+
+def test_research_outputs_do_not_expose_internal_hashes() -> None:
+    parameters = json.loads(PARAMETERS.read_text(encoding="utf-8"))
+    report = Path("analysis/results/v1_report.md").read_text(encoding="utf-8")
+
+    assert "qtable_sha256" not in parameters["dataset"]["jpeg"]
+    assert "SHA-256" not in report

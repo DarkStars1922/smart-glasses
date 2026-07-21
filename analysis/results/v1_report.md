@@ -16,7 +16,6 @@ For multiple visible copies, replace the single optical path by \(Z(\mathbf u)=\
 
 - Groups: `12`; frames: `120`.
 - JPEG quality 96; chroma subsampling `4:2:0`.
-- Quantization-table SHA-256: `4fc84b9dccb32e42b18b786b0fe3c74267269ab6d2b4db34cba7085e11d7cb04`.
 
 ## 47 mm domain
 
