@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import cv2
@@ -12,6 +13,7 @@ from analysis.degradation.fitting import (
     fit_manifest,
     fit_point_grid,
 )
+from analysis.degradation.reporting import _params_for_comparison, write_results
 from analysis.degradation.schema import load_manifest
 
 
@@ -28,6 +30,12 @@ SOURCE_BARS = np.asarray(
     ],
     dtype=np.float32,
 ) / 255.0
+
+
+@pytest.fixture(scope="module")
+def current_fit() -> tuple[object, dict[str, object]]:
+    manifest = load_manifest(Path("analysis/calibration_b_v1.json"))
+    return manifest, fit_manifest(manifest, seed=20260721)
 
 
 def _synthetic_point_burst() -> list[np.ndarray]:
@@ -111,9 +119,37 @@ def test_color_fit_prefers_diagonal_when_full_matrix_does_not_generalize() -> No
     assert result.value["leave_one_out_mae"] < 0.02
 
 
-def test_current_dataset_reports_effective_identifiability() -> None:
-    manifest = load_manifest(Path("analysis/calibration_b_v1.json"))
-    result = fit_manifest(manifest, seed=20260721)
+def test_default_synthesis_does_not_apply_provisional_color_or_noise() -> None:
+    source = np.zeros((8, 8, 3), dtype=np.float32)
+    real = np.zeros((8, 8, 3), dtype=np.float32)
+    effective = {
+        "scale_camera_per_source": [1.0, 1.0],
+        "blur_fwhm_camera_px": [0.0, 0.0],
+        "blur_angle_deg": 0.0,
+        "color_matrix": [[0.0, 0.0, 0.0]] * 3,
+        "color_bias_rgb": [0.3, 0.4, 0.5],
+        "noise_slope_rgb": [0.1, 0.1, 0.1],
+        "noise_intercept_rgb": [0.1, 0.1, 0.1],
+        "jpeg_quality": 96,
+        "status": {"color": "provisional", "noise": "provisional"},
+    }
+
+    params = _params_for_comparison(source, effective, real)
+
+    assert params.color_matrix == (
+        (1.0, 0.0, 0.0),
+        (0.0, 1.0, 0.0),
+        (0.0, 0.0, 1.0),
+    )
+    assert params.bias_rgb == (0.0, 0.0, 0.0)
+    assert params.noise_slope == (0.0, 0.0, 0.0)
+    assert params.noise_intercept == (0.0, 0.0, 0.0)
+
+
+def test_current_dataset_reports_effective_identifiability(
+    current_fit: tuple[object, dict[str, object]],
+) -> None:
+    _, result = current_fit
 
     assert result["dataset"]["frame_count"] == 120
     assert result["dataset"]["jpeg"]["equivalent_quality"] == 96
@@ -132,3 +168,46 @@ def test_current_dataset_reports_effective_identifiability() -> None:
     assert result["domains"]["supermacro_47_primary"]["groups"]["23"]["psf"][
         "status"
     ] == "estimated"
+    for domain in result["domains"].values():
+        assert "effective_parameters" in domain
+        assert domain["effective_parameters"]["jpeg_quality"] == 96
+        assert len(domain["effective_parameters"]["scale_camera_per_source"]) == 2
+
+
+def test_writes_deterministic_results_and_diagnostics(
+    tmp_path: Path,
+    current_fit: tuple[object, dict[str, object]],
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    manifest, result = current_fit
+    first = tmp_path / "first"
+    second = tmp_path / "second"
+
+    write_results(result, manifest, first, seed=20260721)
+    write_results(result, manifest, second, seed=20260721)
+
+    first_files = {
+        path.relative_to(first): path.read_bytes()
+        for path in sorted(first.rglob("*"))
+        if path.is_file()
+    }
+    second_files = {
+        path.relative_to(second): path.read_bytes()
+        for path in sorted(second.rglob("*"))
+        if path.is_file()
+    }
+    assert first_files == second_files
+    parameters = json.loads((first / "v1_parameters.json").read_text(encoding="utf-8"))
+    assert parameters["dataset"]["jpeg"]["equivalent_quality"] == 96
+    report = (first / "v1_report.md").read_text(encoding="utf-8")
+    assert "Identifiability" in report
+    assert "47 mm" in report
+    assert "69 mm" in report
+    assert "JPEG quality 96" in report
+    assert "下一轮拍摄" in report
+    diagnostics = list((first / "v1_diagnostics").glob("*.png"))
+    assert len([path for path in diagnostics if path.name.startswith("roi_")]) == 12
+    assert len([path for path in diagnostics if path.name.startswith("comparison_")]) >= 2
+    assert not [
+        record for record in caplog.records if "Clipping input data" in record.message
+    ]

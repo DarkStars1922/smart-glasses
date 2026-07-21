@@ -739,6 +739,104 @@ def _group_metadata(group: CaptureGroup) -> dict[str, Any]:
     }
 
 
+def _ranked_results(groups: Mapping[str, Any], key: str) -> list[Mapping[str, Any]]:
+    rank = {"estimated": 2, "provisional": 1, "not_identifiable": 0}
+    candidates = [
+        payload[key]
+        for payload in groups.values()
+        if key in payload and payload[key].get("value") is not None
+    ]
+    return sorted(
+        candidates,
+        key=lambda item: (rank.get(str(item.get("status")), -1), int(item.get("sample_count", 0))),
+        reverse=True,
+    )
+
+
+def _effective_domain_parameters(
+    groups: Mapping[str, Any],
+    *,
+    jpeg_quality: int,
+    jpeg_subsampling: str,
+) -> dict[str, Any]:
+    geometry = _ranked_results(groups, "geometry")
+    psf = _ranked_results(groups, "psf")
+    photometry = _ranked_results(groups, "photometry")
+    noise = _ranked_results(groups, "noise")
+    background = _ranked_results(groups, "background")
+
+    scale: list[float | None] = [None, None]
+    scale_status = "not_identifiable"
+    for candidate in geometry + psf:
+        candidate_scale = candidate["value"].get("scale_camera_per_source")
+        if candidate_scale and len(candidate_scale) == 2:
+            scale = list(candidate_scale)
+            scale_status = str(candidate["status"])
+            break
+
+    blur: list[float | None] = [None, None]
+    blur_angle: float | None = None
+    blur_status = "not_identifiable"
+    for candidate in psf + geometry:
+        value = candidate["value"]
+        if value.get("fwhm_camera_px"):
+            blur = list(value["fwhm_camera_px"])
+            blur_angle = value.get("major_axis_angle_deg")
+            blur_status = str(candidate["status"])
+            break
+        if value.get("edge_gradient_fwhm_camera_px") is not None:
+            width = float(value["edge_gradient_fwhm_camera_px"])
+            blur = [width, width]
+            blur_angle = 0.0
+            blur_status = "provisional"
+            break
+
+    color_matrix: list[list[float]] | None = None
+    color_bias: list[float] | None = None
+    color_status = "not_identifiable"
+    for candidate in photometry:
+        value = candidate["value"]
+        if value.get("color_matrix") is not None:
+            color_matrix = value["color_matrix"]
+            color_bias = value["bias_rgb"]
+            color_status = str(candidate["status"])
+            break
+
+    noise_slope: list[float] | None = None
+    noise_intercept: list[float] | None = None
+    noise_status = "not_identifiable"
+    if noise:
+        noise_slope = noise[0]["value"].get("slope_rgb")
+        noise_intercept = noise[0]["value"].get("intercept_rgb")
+        noise_status = str(noise[0]["status"])
+
+    background_rgb: list[float] | None = None
+    background_status = "not_identifiable"
+    if background:
+        background_rgb = background[0]["value"].get("median_rgb")
+        background_status = str(background[0]["status"])
+
+    return {
+        "scale_camera_per_source": scale,
+        "blur_fwhm_camera_px": blur,
+        "blur_angle_deg": blur_angle,
+        "color_matrix": color_matrix,
+        "color_bias_rgb": color_bias,
+        "noise_slope_rgb": noise_slope,
+        "noise_intercept_rgb": noise_intercept,
+        "background_rgb": background_rgb,
+        "jpeg_quality": jpeg_quality,
+        "jpeg_subsampling": jpeg_subsampling,
+        "status": {
+            "scale": scale_status,
+            "blur": blur_status,
+            "color": color_status,
+            "noise": noise_status,
+            "background": background_status,
+        },
+    }
+
+
 def fit_manifest(manifest: CalibrationManifest, *, seed: int) -> dict[str, Any]:
     del seed  # Reserved for deterministic bootstrap resampling and synthesis diagnostics.
     jpeg_rows = [inspect_jpeg(frame) for group in manifest.groups for frame in group.frames]
@@ -761,6 +859,11 @@ def fit_manifest(manifest: CalibrationManifest, *, seed: int) -> dict[str, Any]:
         domains[domain_name] = {
             "paths": sorted({group.path for group in domain_groups}),
             "groups": groups,
+            "effective_parameters": _effective_domain_parameters(
+                groups,
+                jpeg_quality=next(iter(qualities)),
+                jpeg_subsampling=next(iter(samplings)),
+            ),
             "identifiability": {
                 "display_camera_response": not_identifiable(
                     "auto exposure and white balance vary across separately displayed targets"

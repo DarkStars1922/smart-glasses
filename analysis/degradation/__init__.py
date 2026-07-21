@@ -1,5 +1,6 @@
 from .fitting import FitResult, fit_manifest
 from .model import DegradationParameters, degrade
+from .reporting import write_results
 from .schema import CalibrationManifest, CaptureGroup, ManifestError, load_manifest
 
 __all__ = [
@@ -11,4 +12,5 @@ __all__ = [
     "degrade",
     "fit_manifest",
     "load_manifest",
+    "write_results",
 ]

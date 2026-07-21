@@ -70,3 +70,13 @@ def test_rejects_unknown_role(tmp_path: Path) -> None:
 
     with pytest.raises(ManifestError, match="unknown roles"):
         load_manifest(path)
+
+
+def test_real_manifest_uses_visually_reviewed_path_annotations() -> None:
+    manifest = load_manifest(Path("analysis/calibration_b_v1.json"))
+    groups = {group.id: group for group in manifest.groups}
+
+    assert groups["22"].roles == frozenset({"validation"})
+    assert groups["22"].roi_xyxy == (1600, 600, 2800, 2000)
+    assert groups["24"].roi_xyxy == (2150, 550, 2750, 1350)
+    assert groups["30"].roi_xyxy == (1550, 900, 2200, 1700)

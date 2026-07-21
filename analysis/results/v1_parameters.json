@@ -1,0 +1,1070 @@
+{
+  "dataset": {
+    "frame_count": 120,
+    "group_count": 12,
+    "jpeg": {
+      "equivalent_quality": 96,
+      "qtable_sha256": "4fc84b9dccb32e42b18b786b0fe3c74267269ab6d2b4db34cba7085e11d7cb04",
+      "subsampling": "4:2:0"
+    }
+  },
+  "domains": {
+    "supermacro_47_primary": {
+      "effective_parameters": {
+        "background_rgb": [
+          0.07450981,
+          0.07450981,
+          0.06666667
+        ],
+        "blur_angle_deg": 49.98932877,
+        "blur_fwhm_camera_px": [
+          7.82214736,
+          9.68293247
+        ],
+        "color_bias_rgb": [
+          0.18480393,
+          0.35,
+          0.38970589
+        ],
+        "color_matrix": [
+          [
+            -0.00294118,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.03284314,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.07892157
+          ]
+        ],
+        "jpeg_quality": 96,
+        "jpeg_subsampling": "4:2:0",
+        "noise_intercept_rgb": [
+          8.629e-05,
+          9.637e-05,
+          8.27e-05
+        ],
+        "noise_slope_rgb": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale_camera_per_source": [
+          0.48975024,
+          0.41919657
+        ],
+        "status": {
+          "background": "provisional",
+          "blur": "estimated",
+          "color": "provisional",
+          "noise": "provisional",
+          "scale": "estimated"
+        }
+      },
+      "groups": {
+        "00": {
+          "background": {
+            "coordinate_system": "path ROI",
+            "reason": "black display burst includes ambient light, scattering, auto exposure, and JPEG black level",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {},
+            "units": "normalized JPEG code value",
+            "value": {
+              "median_rgb": [
+                0.07450981,
+                0.07450981,
+                0.06666667
+              ]
+            }
+          },
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.02
+            ],
+            "feature_kind": "uniform",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              500.0,
+              640.0
+            ],
+            "roi_xyxy": [
+              2240,
+              820,
+              2460,
+              1080
+            ],
+            "roles": [
+              "background",
+              "noise"
+            ]
+          },
+          "noise": {
+            "coordinate_system": "registered/nominally static path ROI",
+            "reason": "burst has insufficient within-exposure intensity support for separating slope and intercept",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {
+              "interval_type": "temporal burst estimate; not independent sensor noise"
+            },
+            "units": "variance of normalized JPEG code value",
+            "value": {
+              "dynamic_range": 0.0172549,
+              "intensity_bin_count_rgb": [
+                2,
+                2,
+                2
+              ],
+              "intercept_rgb": [
+                8.629e-05,
+                9.637e-05,
+                8.27e-05
+              ],
+              "median_temporal_variance_rgb": [
+                8.817e-05,
+                9.654e-05,
+                8.356e-05
+              ],
+              "slope_rgb": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "01": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.01,
+              0.01
+            ],
+            "feature_kind": "uniform",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              500.0,
+              640.0
+            ],
+            "roi_xyxy": [
+              2240,
+              820,
+              2460,
+              1080
+            ],
+            "roles": [
+              "noise",
+              "photometry"
+            ]
+          },
+          "noise": {
+            "coordinate_system": "registered/nominally static path ROI",
+            "reason": "burst has insufficient within-exposure intensity support for separating slope and intercept",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {
+              "interval_type": "temporal burst estimate; not independent sensor noise"
+            },
+            "units": "variance of normalized JPEG code value",
+            "value": {
+              "dynamic_range": 0.54862744,
+              "intensity_bin_count_rgb": [
+                4,
+                10,
+                11
+              ],
+              "intercept_rgb": [
+                0.0,
+                0.03528897,
+                0.08061337
+              ],
+              "median_temporal_variance_rgb": [
+                0.00056201,
+                0.00215618,
+                0.00196181
+              ],
+              "slope_rgb": [
+                0.02495578,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "photometry": {
+            "coordinate_system": "path ROI",
+            "reason": "uniform target supports only a JPEG-space RGB level for this exposure",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {},
+            "units": "normalized JPEG code value",
+            "value": {
+              "median_rgb": [
+                0.21960784,
+                0.54901963,
+                0.70980394
+              ]
+            }
+          }
+        },
+        "05": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.02
+            ],
+            "feature_kind": "uniform",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              800.0,
+              800.0
+            ],
+            "roi_xyxy": [
+              2240,
+              820,
+              2460,
+              1080
+            ],
+            "roles": [
+              "noise",
+              "photometry"
+            ]
+          },
+          "noise": {
+            "coordinate_system": "registered/nominally static path ROI",
+            "reason": "burst has insufficient within-exposure intensity support for separating slope and intercept",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {
+              "interval_type": "temporal burst estimate; not independent sensor noise"
+            },
+            "units": "variance of normalized JPEG code value",
+            "value": {
+              "dynamic_range": 0.38823527,
+              "intensity_bin_count_rgb": [
+                2,
+                8,
+                9
+              ],
+              "intercept_rgb": [
+                0.00044923,
+                0.02595002,
+                0.05701747
+              ],
+              "median_temporal_variance_rgb": [
+                0.00047315,
+                0.01499227,
+                0.03265582
+              ],
+              "slope_rgb": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "photometry": {
+            "coordinate_system": "path ROI",
+            "reason": "uniform target supports only a JPEG-space RGB level for this exposure",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {},
+            "units": "normalized JPEG code value",
+            "value": {
+              "median_rgb": [
+                0.1254902,
+                0.33333334,
+                0.4627451
+              ]
+            }
+          }
+        },
+        "18": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.02
+            ],
+            "feature_kind": "color_bars",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              500.0,
+              640.0
+            ],
+            "roi_xyxy": [
+              2123,
+              349,
+              2537,
+              950
+            ],
+            "roles": [
+              "photometry"
+            ]
+          },
+          "photometry": {
+            "coordinate_system": "path ROI; one shared exposure per frame",
+            "reason": "color model selected by leave-one-bar-out error and nonnegative response",
+            "sample_count": 80,
+            "status": "provisional",
+            "uncertainty": {
+              "interval_type": "descriptive burst IQR",
+              "observed_bar_rgb_iqr": [
+                [
+                  0.04509804,
+                  0.05784314,
+                  0.16470589
+                ],
+                [
+                  0.04019608,
+                  0.1254902,
+                  0.34607845
+                ],
+                [
+                  0.0764706,
+                  0.05294117,
+                  0.04803921
+                ],
+                [
+                  0.0745098,
+                  0.0862745,
+                  0.02352941
+                ],
+                [
+                  0.06274509,
+                  0.02941176,
+                  0.15490195
+                ],
+                [
+                  0.08235294,
+                  0.29411765,
+                  0.53627452
+                ],
+                [
+                  0.06176471,
+                  0.21078432,
+                  0.24509804
+                ],
+                [
+                  0.10490196,
+                  0.2627451,
+                  0.41568629
+                ]
+              ]
+            },
+            "units": "normalized JPEG code value",
+            "value": {
+              "bias_rgb": [
+                0.18480393,
+                0.35,
+                0.38970589
+              ],
+              "color_matrix": [
+                [
+                  -0.00294118,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  -0.03284314,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.07892157
+                ]
+              ],
+              "diagonal_leave_one_out_mae": 0.12734205,
+              "full_leave_one_out_mae": 0.18733661,
+              "leave_one_out_mae": 0.12734205,
+              "observed_bar_rgb": [
+                [
+                  0.17843138,
+                  0.21176471,
+                  0.32352942
+                ],
+                [
+                  0.19607843,
+                  0.2254902,
+                  0.20392157
+                ],
+                [
+                  0.2509804,
+                  0.36666667,
+                  0.6156863
+                ],
+                [
+                  0.19607843,
+                  0.46470588,
+                  0.6156863
+                ],
+                [
+                  0.15882353,
+                  0.47254902,
+                  0.60588238
+                ],
+                [
+                  0.19411765,
+                  0.42941177,
+                  0.52156864
+                ],
+                [
+                  0.17450981,
+                  0.3509804,
+                  0.32941177
+                ],
+                [
+                  0.11764706,
+                  0.14705883,
+                  0.21764707
+                ]
+              ],
+              "selected_model": "diagonal"
+            }
+          }
+        },
+        "19": {
+          "geometry": {
+            "coordinate_system": "path ROI",
+            "reason": "checker supports local scale and edge width but not absolute periodic crop",
+            "sample_count": 181,
+            "status": "estimated",
+            "uncertainty": {
+              "edge_width": {
+                "median": 7.0,
+                "q25": 4.75,
+                "q75": 9.0
+              },
+              "interval_type": "descriptive burst IQR",
+              "scale_x": {
+                "median": 0.355853,
+                "q25": 0.33466,
+                "q75": 0.359582
+              },
+              "scale_y": {
+                "median": 0.357069,
+                "q25": 0.348023,
+                "q75": 0.363898
+              }
+            },
+            "units": "pixels",
+            "value": {
+              "absolute_source_crop": null,
+              "absolute_source_crop_status": "not_identifiable",
+              "edge_gradient_fwhm_camera_px": 7.0,
+              "scale_camera_per_source": [
+                0.35585269,
+                0.3570686
+              ],
+              "square_centers_per_frame_range": [
+                15,
+                20
+              ]
+            }
+          },
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.01,
+              0.01
+            ],
+            "feature_kind": "checkerboard",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              640.0,
+              1250.0
+            ],
+            "roi_xyxy": [
+              2300,
+              500,
+              2750,
+              1250
+            ],
+            "roles": [
+              "geometry"
+            ]
+          }
+        },
+        "22": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.02
+            ],
+            "feature_kind": "point_grid",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              640.0,
+              800.0
+            ],
+            "roi_xyxy": [
+              1600,
+              600,
+              2800,
+              2000
+            ],
+            "roles": [
+              "validation"
+            ]
+          },
+          "validation": {
+            "coordinate_system": "not applicable",
+            "reason": "validation is computed after synthesizing from fitted domain parameters",
+            "sample_count": 0,
+            "status": "not_identifiable",
+            "uncertainty": {},
+            "units": "not applicable",
+            "value": null
+          }
+        },
+        "23": {
+          "geometry": {
+            "coordinate_system": "path ROI; FWHM sorted by minor/major covariance axis",
+            "reason": "isolated point-grid components support local scale and effective PSF",
+            "sample_count": 566,
+            "status": "estimated",
+            "uncertainty": {
+              "fwhm_major": {
+                "median": 9.682932,
+                "q25": 9.003366,
+                "q75": 10.598931
+              },
+              "fwhm_minor": {
+                "median": 7.822147,
+                "q25": 6.904243,
+                "q75": 8.55486
+              },
+              "interval_type": "descriptive burst IQR",
+              "scale_x": {
+                "median": 0.48975,
+                "q25": 0.473645,
+                "q75": 0.492356
+              },
+              "scale_y": {
+                "median": 0.419197,
+                "q25": 0.411415,
+                "q75": 0.425349
+              }
+            },
+            "units": "pixels and degrees",
+            "value": {
+              "fwhm_camera_px": [
+                7.82214736,
+                9.68293247
+              ],
+              "fwhm_source_px": [
+                15.97170698,
+                23.09878761
+              ],
+              "major_axis_angle_deg": 49.98932877,
+              "points_per_frame_range": [
+                21,
+                91
+              ],
+              "scale_camera_per_source": [
+                0.48975024,
+                0.41919657
+              ]
+            }
+          },
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.03,
+              0.04
+            ],
+            "feature_kind": "point_grid",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              640.0,
+              1250.0
+            ],
+            "roi_xyxy": [
+              2850,
+              1100,
+              3536,
+              2300
+            ],
+            "roles": [
+              "geometry",
+              "psf"
+            ]
+          },
+          "psf": {
+            "coordinate_system": "path ROI; FWHM sorted by minor/major covariance axis",
+            "reason": "isolated point-grid components support local scale and effective PSF",
+            "sample_count": 566,
+            "status": "estimated",
+            "uncertainty": {
+              "fwhm_major": {
+                "median": 9.682932,
+                "q25": 9.003366,
+                "q75": 10.598931
+              },
+              "fwhm_minor": {
+                "median": 7.822147,
+                "q25": 6.904243,
+                "q75": 8.55486
+              },
+              "interval_type": "descriptive burst IQR",
+              "scale_x": {
+                "median": 0.48975,
+                "q25": 0.473645,
+                "q75": 0.492356
+              },
+              "scale_y": {
+                "median": 0.419197,
+                "q25": 0.411415,
+                "q75": 0.425349
+              }
+            },
+            "units": "pixels and degrees",
+            "value": {
+              "fwhm_camera_px": [
+                7.82214736,
+                9.68293247
+              ],
+              "fwhm_source_px": [
+                15.97170698,
+                23.09878761
+              ],
+              "major_axis_angle_deg": 49.98932877,
+              "points_per_frame_range": [
+                21,
+                91
+              ],
+              "scale_camera_per_source": [
+                0.48975024,
+                0.41919657
+              ]
+            }
+          }
+        },
+        "24": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.01,
+              0.02
+            ],
+            "feature_kind": "slanted_edges",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              500.0,
+              1250.0
+            ],
+            "roi_xyxy": [
+              2150,
+              550,
+              2750,
+              1350
+            ],
+            "roles": [
+              "mtf"
+            ]
+          },
+          "mtf": {
+            "coordinate_system": "path ROI",
+            "reason": "ROI contains the slanted-edge chart, but exact patch correspondences are unavailable",
+            "sample_count": 198,
+            "status": "provisional",
+            "uncertainty": {
+              "edge_width": {
+                "median": 5.5,
+                "q25": 3.0,
+                "q75": 8.0
+              },
+              "interval_type": "descriptive burst IQR"
+            },
+            "units": "camera pixels",
+            "value": {
+              "edge_gradient_fwhm_camera_px": 5.5
+            }
+          }
+        },
+        "28": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.01,
+              0.016666
+            ],
+            "feature_kind": "siemens_star",
+            "focal_35mm_median": 47.0,
+            "focal_35mm_range": [
+              47.0,
+              47.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              800.0,
+              1600.0
+            ],
+            "roi_xyxy": [
+              2750,
+              550,
+              3250,
+              1150
+            ],
+            "roles": [
+              "validation"
+            ]
+          },
+          "validation": {
+            "coordinate_system": "not applicable",
+            "reason": "validation is computed after synthesizing from fitted domain parameters",
+            "sample_count": 0,
+            "status": "not_identifiable",
+            "uncertainty": {},
+            "units": "not applicable",
+            "value": null
+          }
+        }
+      },
+      "identifiability": {
+        "absolute_reflection_geometry": {
+          "coordinate_system": "not applicable",
+          "reason": "captured geometry charts are periodic and lack an asymmetric absolute orientation marker",
+          "sample_count": 0,
+          "status": "not_identifiable",
+          "uncertainty": {},
+          "units": "not applicable",
+          "value": null
+        },
+        "display_camera_response": {
+          "coordinate_system": "not applicable",
+          "reason": "auto exposure and white balance vary across separately displayed targets",
+          "sample_count": 0,
+          "status": "not_identifiable",
+          "uncertainty": {},
+          "units": "not applicable",
+          "value": null
+        },
+        "independent_sensor_noise": {
+          "coordinate_system": "not applicable",
+          "reason": "JPEG-only bursts confound sensor noise with demosaicing, denoising, sharpening, and compression",
+          "sample_count": 0,
+          "status": "not_identifiable",
+          "uncertainty": {},
+          "units": "not applicable",
+          "value": null
+        }
+      },
+      "paths": [
+        "primary_readable"
+      ]
+    },
+    "supermacro_69_primary": {
+      "effective_parameters": {
+        "background_rgb": null,
+        "blur_angle_deg": 0.0,
+        "blur_fwhm_camera_px": [
+          6.0,
+          6.0
+        ],
+        "color_bias_rgb": null,
+        "color_matrix": null,
+        "jpeg_quality": 96,
+        "jpeg_subsampling": "4:2:0",
+        "noise_intercept_rgb": null,
+        "noise_slope_rgb": null,
+        "scale_camera_per_source": [
+          0.473826,
+          0.50463521
+        ],
+        "status": {
+          "background": "not_identifiable",
+          "blur": "provisional",
+          "color": "not_identifiable",
+          "noise": "not_identifiable",
+          "scale": "estimated"
+        }
+      },
+      "groups": {
+        "19_2": {
+          "geometry": {
+            "coordinate_system": "path ROI",
+            "reason": "checker supports local scale and edge width but not absolute periodic crop",
+            "sample_count": 455,
+            "status": "estimated",
+            "uncertainty": {
+              "edge_width": {
+                "median": 6.0,
+                "q25": 3.75,
+                "q75": 8.0
+              },
+              "interval_type": "descriptive burst IQR",
+              "scale_x": {
+                "median": 0.473826,
+                "q25": 0.469589,
+                "q75": 0.479254
+              },
+              "scale_y": {
+                "median": 0.504635,
+                "q25": 0.498889,
+                "q75": 0.507692
+              }
+            },
+            "units": "pixels",
+            "value": {
+              "absolute_source_crop": null,
+              "absolute_source_crop_status": "not_identifiable",
+              "edge_gradient_fwhm_camera_px": 6.0,
+              "scale_camera_per_source": [
+                0.473826,
+                0.50463521
+              ],
+              "square_centers_per_frame_range": [
+                26,
+                58
+              ]
+            }
+          },
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.02
+            ],
+            "feature_kind": "checkerboard",
+            "focal_35mm_median": 69.0,
+            "focal_35mm_range": [
+              69.0,
+              69.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              400.0,
+              640.0
+            ],
+            "roi_xyxy": [
+              1100,
+              100,
+              2500,
+              1250
+            ],
+            "roles": [
+              "geometry",
+              "photometry",
+              "psf"
+            ]
+          },
+          "photometry": {
+            "coordinate_system": "path ROI",
+            "reason": "uniform target supports only a JPEG-space RGB level for this exposure",
+            "sample_count": 10,
+            "status": "provisional",
+            "uncertainty": {},
+            "units": "normalized JPEG code value",
+            "value": {
+              "median_rgb": [
+                0.18039216,
+                0.1882353,
+                0.20784314
+              ]
+            }
+          },
+          "psf": {
+            "coordinate_system": "path ROI",
+            "reason": "checker supports local scale and edge width but not absolute periodic crop",
+            "sample_count": 455,
+            "status": "estimated",
+            "uncertainty": {
+              "edge_width": {
+                "median": 6.0,
+                "q25": 3.75,
+                "q75": 8.0
+              },
+              "interval_type": "descriptive burst IQR",
+              "scale_x": {
+                "median": 0.473826,
+                "q25": 0.469589,
+                "q75": 0.479254
+              },
+              "scale_y": {
+                "median": 0.504635,
+                "q25": 0.498889,
+                "q75": 0.507692
+              }
+            },
+            "units": "pixels",
+            "value": {
+              "absolute_source_crop": null,
+              "absolute_source_crop_status": "not_identifiable",
+              "edge_gradient_fwhm_camera_px": 6.0,
+              "scale_camera_per_source": [
+                0.473826,
+                0.50463521
+              ],
+              "square_centers_per_frame_range": [
+                26,
+                58
+              ]
+            }
+          }
+        },
+        "30": {
+          "external_validation": {
+            "coordinate_system": "not applicable",
+            "reason": "neighboring pose/focal capture is reserved for external validation",
+            "sample_count": 0,
+            "status": "not_identifiable",
+            "uncertainty": {},
+            "units": "not applicable",
+            "value": null
+          },
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.02
+            ],
+            "feature_kind": "text",
+            "focal_35mm_median": 70.0,
+            "focal_35mm_range": [
+              70.0,
+              70.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              500.0,
+              640.0
+            ],
+            "roi_xyxy": [
+              1550,
+              900,
+              2200,
+              1700
+            ],
+            "roles": [
+              "external_validation"
+            ]
+          }
+        },
+        "30_2": {
+          "metadata": {
+            "auto_white_balance": 1,
+            "exposure_seconds_range": [
+              0.02,
+              0.03
+            ],
+            "feature_kind": "text",
+            "focal_35mm_median": 69.0,
+            "focal_35mm_range": [
+              69.0,
+              69.0
+            ],
+            "frame_count": 10,
+            "iso_range": [
+              640.0,
+              1000.0
+            ],
+            "roi_xyxy": [
+              850,
+              750,
+              1650,
+              1550
+            ],
+            "roles": [
+              "validation"
+            ]
+          },
+          "validation": {
+            "coordinate_system": "not applicable",
+            "reason": "validation is computed after synthesizing from fitted domain parameters",
+            "sample_count": 0,
+            "status": "not_identifiable",
+            "uncertainty": {},
+            "units": "not applicable",
+            "value": null
+          }
+        }
+      },
+      "identifiability": {
+        "absolute_reflection_geometry": {
+          "coordinate_system": "not applicable",
+          "reason": "captured geometry charts are periodic and lack an asymmetric absolute orientation marker",
+          "sample_count": 0,
+          "status": "not_identifiable",
+          "uncertainty": {},
+          "units": "not applicable",
+          "value": null
+        },
+        "display_camera_response": {
+          "coordinate_system": "not applicable",
+          "reason": "auto exposure and white balance vary across separately displayed targets",
+          "sample_count": 0,
+          "status": "not_identifiable",
+          "uncertainty": {},
+          "units": "not applicable",
+          "value": null
+        },
+        "independent_sensor_noise": {
+          "coordinate_system": "not applicable",
+          "reason": "JPEG-only bursts confound sensor noise with demosaicing, denoising, sharpening, and compression",
+          "sample_count": 0,
+          "status": "not_identifiable",
+          "uncertainty": {},
+          "units": "not applicable",
+          "value": null
+        }
+      },
+      "paths": [
+        "primary_readable"
+      ]
+    }
+  },
+  "model_scope": "path-specific effective super-macro JPEG degradation",
+  "schema_version": "1.0"
+}

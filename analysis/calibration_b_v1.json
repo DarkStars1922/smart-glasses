@@ -61,10 +61,10 @@
       "id": "22",
       "domain": "supermacro_47_primary",
       "path": "primary_readable",
-      "roles": ["psf"],
+      "roles": ["validation"],
       "source": "images/origin/calibration_B/22_point_grid_3px.png",
       "captures": ["images/real/calibration_B/22/*.jpg"],
-      "roi_xyxy": [2850, 1100, 3536, 2300],
+      "roi_xyxy": [1600, 600, 2800, 2000],
       "features": {"kind": "point_grid", "point_size_px": 3, "point_spacing_px": 150}
     },
     {
@@ -84,7 +84,7 @@
       "roles": ["mtf"],
       "source": "images/origin/calibration_B/24_slanted_edges_3x3.png",
       "captures": ["images/real/calibration_B/24/*.jpg"],
-      "roi_xyxy": [2900, 1000, 3350, 1950],
+      "roi_xyxy": [2150, 550, 2750, 1350],
       "features": {"kind": "slanted_edges", "rows": 3, "columns": 3}
     },
     {
@@ -114,7 +114,7 @@
       "roles": ["external_validation"],
       "source": "images/origin/calibration_B/30_text_dark.png",
       "captures": ["images/real/calibration_B/30/*.jpg"],
-      "roi_xyxy": [850, 750, 1650, 1550],
+      "roi_xyxy": [1550, 900, 2200, 1700],
       "features": {"kind": "text", "polarity": "light_on_dark"}
     },
     {
