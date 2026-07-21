@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "workspace_root": "..",
+  "groups": [
+    {
+      "id": "00",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["background", "noise"],
+      "source": "images/origin/calibration_B/00_black.png",
+      "captures": ["images/real/calibration_B/00/*.jpg"],
+      "roi_xyxy": [2240, 820, 2460, 1080],
+      "features": {"kind": "uniform", "rgb": [0, 0, 0]}
+    },
+    {
+      "id": "01",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["photometry", "noise"],
+      "source": "images/origin/calibration_B/01_white.png",
+      "captures": ["images/real/calibration_B/01/*.jpg"],
+      "roi_xyxy": [2240, 820, 2460, 1080],
+      "features": {"kind": "uniform", "rgb": [255, 255, 255]}
+    },
+    {
+      "id": "05",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["photometry", "noise"],
+      "source": "images/origin/calibration_B/05_gray_128.png",
+      "captures": ["images/real/calibration_B/05/*.jpg"],
+      "roi_xyxy": [2240, 820, 2460, 1080],
+      "features": {"kind": "uniform", "rgb": [128, 128, 128]}
+    },
+    {
+      "id": "18",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["photometry"],
+      "source": "images/origin/calibration_B/18_color_bars_full.png",
+      "captures": ["images/real/calibration_B/18/*.jpg"],
+      "roi_xyxy": [2123, 349, 2537, 950],
+      "features": {
+        "kind": "color_bars",
+        "bar_axis": "y",
+        "bar_order": "reverse",
+        "colors_rgb": [[255, 255, 255], [255, 255, 0], [0, 255, 255], [0, 255, 0], [255, 0, 255], [255, 0, 0], [0, 0, 255], [0, 0, 0]]
+      }
+    },
+    {
+      "id": "19",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["geometry"],
+      "source": "images/origin/calibration_B/19_checkerboard.png",
+      "captures": ["images/real/calibration_B/19/*.jpg"],
+      "roi_xyxy": [2300, 500, 2750, 1250],
+      "features": {"kind": "checkerboard", "cell_size_px": 120}
+    },
+    {
+      "id": "22",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["psf"],
+      "source": "images/origin/calibration_B/22_point_grid_3px.png",
+      "captures": ["images/real/calibration_B/22/*.jpg"],
+      "roi_xyxy": [2850, 1100, 3536, 2300],
+      "features": {"kind": "point_grid", "point_size_px": 3, "point_spacing_px": 150}
+    },
+    {
+      "id": "23",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["geometry", "psf"],
+      "source": "images/origin/calibration_B/23_point_grid_7px.png",
+      "captures": ["images/real/calibration_B/23/*.jpg"],
+      "roi_xyxy": [2850, 1100, 3536, 2300],
+      "features": {"kind": "point_grid", "point_size_px": 7, "point_spacing_px": 150}
+    },
+    {
+      "id": "24",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["mtf"],
+      "source": "images/origin/calibration_B/24_slanted_edges_3x3.png",
+      "captures": ["images/real/calibration_B/24/*.jpg"],
+      "roi_xyxy": [2900, 1000, 3350, 1950],
+      "features": {"kind": "slanted_edges", "rows": 3, "columns": 3}
+    },
+    {
+      "id": "28",
+      "domain": "supermacro_47_primary",
+      "path": "primary_readable",
+      "roles": ["validation"],
+      "source": "images/origin/calibration_B/28_siemens_star.png",
+      "captures": ["images/real/calibration_B/28/*.jpg"],
+      "roi_xyxy": [2750, 550, 3250, 1150],
+      "features": {"kind": "siemens_star", "sectors": 144}
+    },
+    {
+      "id": "19_2",
+      "domain": "supermacro_69_primary",
+      "path": "primary_readable",
+      "roles": ["geometry", "psf", "photometry"],
+      "source": "images/origin/calibration_B/19_checkerboard.png",
+      "captures": ["images/real/calibration_B/19_2/*.jpg"],
+      "roi_xyxy": [1100, 100, 2500, 1250],
+      "features": {"kind": "checkerboard", "cell_size_px": 120}
+    },
+    {
+      "id": "30",
+      "domain": "supermacro_69_primary",
+      "path": "primary_readable",
+      "roles": ["external_validation"],
+      "source": "images/origin/calibration_B/30_text_dark.png",
+      "captures": ["images/real/calibration_B/30/*.jpg"],
+      "roi_xyxy": [850, 750, 1650, 1550],
+      "features": {"kind": "text", "polarity": "light_on_dark"}
+    },
+    {
+      "id": "30_2",
+      "domain": "supermacro_69_primary",
+      "path": "primary_readable",
+      "roles": ["validation"],
+      "source": "images/origin/calibration_B/30_text_dark.png",
+      "captures": ["images/real/calibration_B/30_2/*.jpg"],
+      "roi_xyxy": [850, 750, 1650, 1550],
+      "features": {"kind": "text", "polarity": "light_on_dark"}
+    }
+  ]
+}
