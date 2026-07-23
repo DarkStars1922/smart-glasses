@@ -162,7 +162,7 @@ Any existing studies related to the above task? Discuss and show their limitatio
 
         - 渲染参数：字号16\~64 px，字间距\-2\~5 px，字符颜色全色域随机 \+ 黑白偏置，粗体/斜体30% 概率等
 
-    - 退化模拟由 `analysis/degradation/model.py` 的前向算子执行，结构参数从 `v2_parameters.json` 读取，背景和 G/B 斜边更新从 `v3_parameters.json` 读取，单姿态颜色诊断从 `v4_parameters.json` 读取，跨水平及下移姿态共享颜色矩阵和条件参数范围从 `v6_parameters.json` 读取；各版本按参数状态合并，不再使用与设备无关的固定经验范围：
+    - 退化模拟由 `analysis/degradation/model.py` 的前向算子执行。参数装配采用“各参数块最新有效结果”，而不是把最高版本号当成对全部旧参数的替代：W/R 基础几何、点目标 PSF 和自动对焦时变范围来自 `v2_parameters.json`；G/B 点目标宽翼来自 `v2_1_parameters.json` 且保持 `provisional`；背景、单姿态光度和 G/B 斜边核心的后续校正来自 `v3_parameters.json`；v4 只保留颜色模型选择和独立留出证据；共享颜色矩阵及水平/下移姿态条件范围使用最新的 `v6_parameters.json`。各版本按参数状态合并，不再使用与设备无关的固定经验范围：
 
         1. 先采样 device/domain/path/pose，再采样 \(H\) 和已拟合的二次几何残差场 \(\delta\)。
         2. 只有状态为 `estimated` 的参数默认启用；`provisional` 参数必须通过显式开关进入消融实验，`not_identifiable` 参数不能用单点伪装成拟合值。
@@ -170,6 +170,34 @@ Any existing studies related to the above task? Discuss and show their limitatio
         4. 当前实拍 JPEG 固定使用等效 quality 96 和 4:2:0；未来收集其他手机后再按设备条件化 JPEG 表，而不是统一随机到低质量区间。
         5. v6 的跨水平及下移姿态汇总颜色矩阵进入参数匹配合成集；逐帧 K000/K128/K255 tone、空间衰减和时间变化二次背景按 v6 实测会话范围采样。3 x 3 x 3 LUT 因 v4 留出误差更高而不启用。独立噪声、多路径、可见性边界和分解运动核仍不计入参数匹配合成集。
         6. 合成/实拍比较同时报告 ROI 内边缘 FWHM、尺度、颜色误差、噪声方差和 OCR/CER；未配准图像不报告误导性的全图 PSNR/SSIM。
+
+    - 生成实现由协作者负责。当前仓库不提供批量生成器，只提供已经拟合的参数文件和 `analysis/degradation/model.py` 中的路径级前向算子。协作者负责参数适配、文本渲染、批量调度、数据划分和落盘；不得把尚未实现的批量入口写成当前仓库已有功能。低层调用契约为：输入是形状为 `(H,W,3)`、数值位于 `[0,1]` 的 float RGB，`output_size` 按 `(width,height)` 给出，输出仍是 `[0,1]` float RGB。
+
+        ```python
+        from analysis.degradation.model import DegradationParameters, degrade
+
+        params = DegradationParameters(...)  # 由协作者的参数适配层构造
+        degraded = degrade(image, params, seed=seed, encode_jpeg=True)
+        ```
+
+        参数适配层必须按下表读取，不再从报告正文抄录四舍五入后的数值：
+
+        | `DegradationParameters` 项 | 参数来源与使用规则 |
+        |---|---|
+        | `homography`、`geometric_residual_coefficients` | 从 `v2_parameters.json` 的 `fit.geometry_and_spatial_psf` 和所选 v6 会话的 `response_grid_refinement` 读取。JSON 中单应为源像素到相机像素坐标，而前向算子接收归一化单应；若先裁出 ROI，应先左乘 ROI 平移，再按 `H_n = S_o^{-1} H_roi S_s` 转换，其中 `S_s = diag(W_s-1,H_s-1,1)`、`S_o = diag(W_o-1,H_o-1,1)`。几何残差也必须换算成输出宽高归一化位移。 |
+        | `blur_fwhm_px`、`blur_angle_deg` | 默认使用 v2 中状态为 `estimated` 的 W/R 点目标以及 `fit.temporal_psf` 的同一空间样本/帧；G/B 窄核心取 v3 斜边结果，v2.1 点目标宽翼仍为 `provisional`，只在显式消融中启用。FWHM 两轴、角度和位置必须成组抽样。当前算子中的各向异性高斯核是基线近似，若协作者实现核心/翼混合核，必须在元数据记录 `kernel_mode`。 |
+        | `color_matrix` | 固定读取 `v6_parameters.json` 的 `fit.cross_pose_generalization.pooled_color_matrix`；不得继续使用 v3 的旧颜色候选或 v4 中被留出误差否决的 LUT。 |
+        | `tone_curve_levels`、`tone_curve_rgb`、`gain_rgb` | 先选 v6 会话和标定帧，再读取该帧 `anchor_tone_normalization` 的 `frame_midpoint_response_rgb` 与 `frame_gain_after_white_anchor_rgb`。使用三节点 `(0,0.5,1)`，每通道响应为 `(0, midpoint, 1)`；此时 `gamma_rgb=(1,1,1)`，避免重复施加 gamma。 |
+        | `attenuation_coefficients` | v6 `training_node_fit.spatial_log_coefficients` 描述的是源图坐标中的 `log m`，而当前前向算子字段是输出坐标中的六项直接乘子。应先在目标网格计算 `exp(log m)`，再转换/拟合到输出六项基；禁止把这些数组原样复制到 `attenuation_coefficients`。 |
+        | `background_coefficients`、`bias_rgb` | 优先从所选 v6 会话的 `temporal_quadratic_background.coefficients` 抽取一个实测端点场，并转换到输出坐标；v3 背景仅作单姿态对照。首尾端点之间的插值仍是暂定假设，默认不随机外推；`bias_rgb` 保持零，避免与背景常数项重复。 |
+        | `noise_slope`、`noise_intercept` | 当前默认均为零。现有 JPEG 未分离 shot/read noise、去噪与压缩残差，不得填入任意经验噪声；如作消融，须单独标记 `provisional_noise=true`。 |
+        | `jpeg_quality`、`jpeg_subsampling` | 当前设备固定为 `96` 和 Pillow 的 `2`（4:2:0）。参数匹配主数据集不得随机降到其他质量。 |
+
+        采样时先从 `baseline/repeat/pose_left/pose_right/pose_down` 选择 `pose_session`，再在该会话内选择帧。共享矩阵 `C` 可以跨会话复用，但单应、tone、增益、空间衰减和背景必须保留会话/帧条件关系，禁止跨会话独立打乱后重新组合。对于一个 N 帧序列，`source_id`、device/domain/path、基础姿态和结构级 PSF 共享；帧级漂移、自动对焦状态、tone 与增益只在同一 `pose_session` 的实测支持内变化。
+
+        每个样本必须写一条可回放的 JSONL 元数据，至少包含 `sample_id`、`sequence_id`、`frame_index`、`source_id`、`seed`、`model_version="v6"`、`domain="47mm"`、`path="primary_readable"`、`pose_session`、`parameter_sources`、完整的实际参数、`clean_path` 和 `degraded_path`。相同清晰图、元数据和 seed 必须逐像素复现相同的未压缩结果；训练、验证、测试集先按 `source_id` 切分，再扩增退化版本，防止同一文本内容跨集合泄漏。
+
+        生成器验收不以肉眼相似为准。至少检查固定 seed 可复现、元数据可回放、输出有限且位于 `[0,1]`，并在配准 ROI 中将尺度、边缘 FWHM、背景 RGB、颜色 MAE 和 OCR/CER 分布与实拍比较。当前支持范围仅为本设备、47 mm、主要可读路径及已采样的水平/下移姿态；向上硬截断、可见性掩膜、多路径、距离、环境和跨设备变化不得默认混入主训练集。
 
     - 多帧序列生成采用“共享结构参数 + 帧级干扰量”：同一序列共享清晰底图、域、路径、基础投影、二次几何残差和空间 PSF 场；每帧从 `05` 实测分布采样视场漂移与自动对焦 PSF 状态，从 `00` 的可靠配准帧采样逐通道响应漂移。未分离的运动核和物理噪声不写成固定常数。
 

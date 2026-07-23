@@ -238,3 +238,28 @@ def test_document_uses_vertical_down_generalization_results() -> None:
         f"{generalization['leave_one_session_out_max_jpeg_mae']:.4f}",
     ]
     assert all(value in document for value in expected)
+
+
+def test_document_defines_the_synthetic_data_handoff_contract() -> None:
+    document = DOCUMENT.read_text(encoding="utf-8")
+
+    expected = [
+        "各参数块最新有效结果",
+        "DegradationParameters",
+        "degrade(image, params, seed=seed, encode_jpeg=True)",
+        "fit.cross_pose_generalization.pooled_color_matrix",
+        "frame_midpoint_response_rgb",
+        "frame_gain_after_white_anchor_rgb",
+        "`H_n = S_o^{-1} H_roi S_s`",
+        "共享矩阵 `C` 可以跨会话复用",
+        "禁止把这些数组原样复制",
+        "禁止跨会话独立打乱",
+        "sequence_id",
+        "frame_index",
+        "source_id",
+        "pose_session",
+        "model_version",
+        "当前仓库不提供批量生成器",
+    ]
+    assert all(value in document for value in expected)
+    assert "**模拟数据生成交接" not in document
