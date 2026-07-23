@@ -29,6 +29,23 @@ def test_normalized_homography_supports_anisotropic_output_sampling() -> None:
     assert 0.1 < float(actual.mean()) < 0.9
 
 
+def test_quadratic_geometric_residual_moves_warped_content() -> None:
+    image = np.zeros((11, 11, 3), dtype=np.float32)
+    image[5, 4] = 1.0
+    params = replace(
+        DegradationParameters.identity(output_size=(11, 11)),
+        geometric_residual_coefficients=(
+            (0.2, 0.0, 0.0, 0.0, 0.0, 0.0),
+            (0.0, 0.0, 0.0, 0.0, 0.0, 0.0),
+        ),
+    )
+
+    actual = degrade(image, params, seed=12, encode_jpeg=False)
+
+    peak_y, peak_x = np.unravel_index(np.argmax(actual[:, :, 0]), actual.shape[:2])
+    assert (peak_x, peak_y) == (6, 5)
+
+
 def test_color_matrix_maps_input_channels_to_output_channels() -> None:
     image = np.zeros((8, 8, 3), dtype=np.float32)
     image[:, :, 0] = 1.0
@@ -42,6 +59,47 @@ def test_color_matrix_maps_input_channels_to_output_channels() -> None:
     np.testing.assert_allclose(actual[:, :, 0], 0.0, atol=1e-6)
     np.testing.assert_allclose(actual[:, :, 1], 1.0, atol=1e-6)
     np.testing.assert_allclose(actual[:, :, 2], 0.0, atol=1e-6)
+
+
+def test_tone_curve_precedes_spatial_gain_and_additive_background() -> None:
+    image = np.full((6, 6, 3), 0.5, dtype=np.float32)
+    params = replace(
+        DegradationParameters.identity(output_size=(6, 6)),
+        tone_curve_levels=(0.0, 0.5, 1.0),
+        tone_curve_rgb=(
+            (0.0, 0.25, 1.0),
+            (0.0, 0.25, 1.0),
+            (0.0, 0.25, 1.0),
+        ),
+        gain_rgb=(2.0, 2.0, 2.0),
+        attenuation_coefficients=(
+            (0.5, 0.0, 0.0, 0.0, 0.0, 0.0),
+            (0.5, 0.0, 0.0, 0.0, 0.0, 0.0),
+            (0.5, 0.0, 0.0, 0.0, 0.0, 0.0),
+        ),
+        background_coefficients=(
+            (0.1, 0.0, 0.0, 0.0, 0.0, 0.0),
+            (0.1, 0.0, 0.0, 0.0, 0.0, 0.0),
+            (0.1, 0.0, 0.0, 0.0, 0.0, 0.0),
+        ),
+    )
+
+    actual = degrade(image, params, seed=14, encode_jpeg=False)
+
+    np.testing.assert_allclose(actual, 0.35, atol=1e-6)
+
+
+def test_rejects_non_monotonic_tone_curve() -> None:
+    with pytest.raises(ValueError, match="tone curve"):
+        replace(
+            DegradationParameters.identity(output_size=(8, 8)),
+            tone_curve_levels=(0.0, 0.5, 1.0),
+            tone_curve_rgb=(
+                (0.0, 0.6, 0.5),
+                (0.0, 0.5, 1.0),
+                (0.0, 0.5, 1.0),
+            ),
+        )
 
 
 def test_seeded_degradation_is_reproducible() -> None:

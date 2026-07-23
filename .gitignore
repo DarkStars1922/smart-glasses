@@ -1,2 +1,5 @@
 .superpowers/
 __pycache__/
+images/real/
+images/cropped/
+images/origin/屏幕截图*.png

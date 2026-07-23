@@ -1,0 +1,446 @@
+{
+  "schema_version": "v0",
+  "model_scope": "effective super-macro JPEG degradation; not a separated sensor-physics model",
+  "groups": {
+    "00": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.02
+      ],
+      "iso_range": [
+        500.0,
+        640.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "01": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.01,
+        0.01
+      ],
+      "iso_range": [
+        500.0,
+        640.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "05": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.02
+      ],
+      "iso_range": [
+        800.0,
+        800.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "18": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.02
+      ],
+      "iso_range": [
+        500.0,
+        640.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "19": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.01,
+        0.01
+      ],
+      "iso_range": [
+        640.0,
+        1250.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "19_2": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 69.0,
+      "focal_35mm_range": [
+        69.0,
+        69.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.02
+      ],
+      "iso_range": [
+        400.0,
+        640.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "22": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.02
+      ],
+      "iso_range": [
+        640.0,
+        800.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "23": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.03,
+        0.04
+      ],
+      "iso_range": [
+        640.0,
+        1250.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "24": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.01,
+        0.02
+      ],
+      "iso_range": [
+        500.0,
+        1250.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "28": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 47.0,
+      "focal_35mm_range": [
+        47.0,
+        47.0
+      ],
+      "shutter_seconds_range": [
+        0.01,
+        0.016666
+      ],
+      "iso_range": [
+        800.0,
+        1600.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "30": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 70.0,
+      "focal_35mm_range": [
+        70.0,
+        70.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.02
+      ],
+      "iso_range": [
+        500.0,
+        640.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    },
+    "30_2": {
+      "count": 10,
+      "image_size": [
+        4096,
+        3072
+      ],
+      "focal_35mm_median": 69.0,
+      "focal_35mm_range": [
+        69.0,
+        69.0
+      ],
+      "shutter_seconds_range": [
+        0.02,
+        0.03
+      ],
+      "iso_range": [
+        640.0,
+        1000.0
+      ],
+      "auto_exposure": null,
+      "exposure_mode_source": "missing_in_timeburst_exif",
+      "auto_white_balance": true
+    }
+  },
+  "domains": {
+    "47mm": {
+      "groups": [
+        "00",
+        "01",
+        "05",
+        "18",
+        "19",
+        "22",
+        "23",
+        "24",
+        "28",
+        "30"
+      ],
+      "point_grid_7px": {
+        "source_dot_size_px": 7,
+        "source_grid_spacing_px": 150,
+        "detected_dot_samples": 558,
+        "dots_per_frame_range": [
+          15,
+          90
+        ],
+        "camera_grid_spacing_px": [
+          74.172,
+          63.154
+        ],
+        "scale_camera_per_source": [
+          0.4945,
+          0.421
+        ],
+        "observed_fwhm_camera_px": [
+          7.83,
+          9.65
+        ],
+        "effective_fwhm_source_px_approx": [
+          15.83,
+          22.92
+        ]
+      }
+    },
+    "69mm": {
+      "groups": [
+        "19_2",
+        "30_2"
+      ],
+      "checkerboard": {
+        "source_cell_size_px": 120,
+        "detected_square_centers": 47,
+        "scale_camera_per_source": [
+          0.4801,
+          0.5087
+        ],
+        "edge_gradient_fwhm_camera_px": 6.0,
+        "edge_gradient_fwhm_source_px_approx": 12.14,
+        "absolute_screen_mapping_identifiable": false,
+        "reason": "periodic checkerboard reveals only a cropped screen region"
+      }
+    }
+  },
+  "photometry": {
+    "auto_exposure_detected": true,
+    "black": {
+      "median_rgb": [
+        19.159000396728516,
+        19.222000122070312,
+        16.841999053955078
+      ],
+      "between_frame_rgb_std": [
+        1.0,
+        1.1799999475479126,
+        0.8619999885559082
+      ],
+      "median_within_patch_rgb_std": [
+        2.2260000705718994,
+        2.263000011444092,
+        2.239000082015991
+      ],
+      "exposure_time_x_iso_range": [
+        10.0,
+        12.8
+      ]
+    },
+    "white": {
+      "median_rgb": [
+        58.21200180053711,
+        128.7830047607422,
+        169.67300415039062
+      ],
+      "between_frame_rgb_std": [
+        3.378999948501587,
+        11.529999732971191,
+        13.87600040435791
+      ],
+      "median_within_patch_rgb_std": [
+        11.585000038146973,
+        23.944000244140625,
+        27.844999313354492
+      ],
+      "exposure_time_x_iso_range": [
+        5.0,
+        6.4
+      ]
+    },
+    "gray128": {
+      "median_rgb": [
+        30.968000411987305,
+        69.62899780273438,
+        88.43000030517578
+      ],
+      "between_frame_rgb_std": [
+        3.2109999656677246,
+        13.878000259399414,
+        21.034000396728516
+      ],
+      "median_within_patch_rgb_std": [
+        6.708000183105469,
+        34.558998107910156,
+        50.029998779296875
+      ],
+      "exposure_time_x_iso_range": [
+        16.0,
+        16.0
+      ]
+    },
+    "white_to_gray128_rgb_ratio": [
+      1.88,
+      1.85,
+      1.919
+    ],
+    "identifiability": "relative JPEG-space statistics only; response gamma and sensor noise are confounded with auto exposure and ISP"
+  },
+  "current_conclusions": [
+    "The 69 mm matched checker/text pair is valid for local geometry and text recoverability.",
+    "The 7 px point grid is visible; the 3 px point grid is below the reliable optical/ISP cutoff.",
+    "Text at 40 px and above is visibly recoverable in the 69 mm domain; 16-24 px text remains marginal.",
+    "Multiple reflection paths require path-specific crops or a mixture-of-warps term."
+  ],
+  "limitations": [
+    "A periodic checkerboard cannot identify the absolute source crop or reflection orientation.",
+    "Automatic exposure and white balance prevent a unique gamma, color matrix, or sensor-noise fit.",
+    "Only one fixed text chart is available, so OCR generalization cannot yet be measured.",
+    "The 47 mm and 69 mm captures must remain separate conditional domains."
+  ],
+  "recommended_v2": {
+    "required_patterns": [
+      "21_asymmetric_grid",
+      "29_spatial_color_patches",
+      "32_gray_ramp_with_fiducials",
+      "33_random_text_with_fiducials"
+    ],
+    "optional_patterns": [
+      "25_resolution_lines_horizontal",
+      "26_resolution_lines_vertical",
+      "27_resolution_lines_diagonal"
+    ],
+    "capture_protocol": [
+      "Use 69 mm as the primary recovery domain and 47 mm as a secondary domain.",
+      "At each pose, capture the asymmetric grid immediately before every target without moving the phone or glasses.",
+      "Wait 3 seconds after switching patterns, then keep the sharpest 5-8 frames from a 10-frame burst.",
+      "Capture the gray ramp and RGB/CMY patches in one frame so auto exposure is shared across all levels.",
+      "Capture at least 20 independently generated text charts; keep 5-10 frames per chart.",
+      "Preserve full JPEGs and EXIF; never mix focal domains without a domain label."
+    ]
+  }
+}

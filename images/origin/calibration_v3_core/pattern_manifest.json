@@ -1,0 +1,5193 @@
+{
+  "source_size": [
+    2500,
+    1600
+  ],
+  "sequence": [
+    "00_locator_start.png",
+    "01_full_black_start.png",
+    "02_permuted_response_A.png",
+    "03_permuted_response_B.png",
+    "04_permuted_response_C.png",
+    "05_red_gray_ramp.png",
+    "06_GB_slanted_edges.png",
+    "07_full_black_end.png",
+    "08_locator_end.png"
+  ],
+  "patch_colors": {
+    "K000": [
+      0,
+      0,
+      0
+    ],
+    "K036": [
+      36,
+      36,
+      36
+    ],
+    "K073": [
+      73,
+      73,
+      73
+    ],
+    "K109": [
+      109,
+      109,
+      109
+    ],
+    "K146": [
+      146,
+      146,
+      146
+    ],
+    "K182": [
+      182,
+      182,
+      182
+    ],
+    "K219": [
+      219,
+      219,
+      219
+    ],
+    "K255": [
+      255,
+      255,
+      255
+    ],
+    "R": [
+      255,
+      0,
+      0
+    ],
+    "G": [
+      0,
+      255,
+      0
+    ],
+    "B": [
+      0,
+      0,
+      255
+    ],
+    "C": [
+      0,
+      255,
+      255
+    ],
+    "M": [
+      255,
+      0,
+      255
+    ],
+    "Y": [
+      255,
+      255,
+      0
+    ]
+  },
+  "response_charts": {
+    "A": {
+      "assignments": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            430,
+            290,
+            627,
+            427
+          ],
+          "center_xy": [
+            528.5,
+            358.5
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            636,
+            290,
+            833,
+            427
+          ],
+          "center_xy": [
+            734.5,
+            358.5
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            290,
+            1039,
+            427
+          ],
+          "center_xy": [
+            940.5,
+            358.5
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1048,
+            290,
+            1245,
+            427
+          ],
+          "center_xy": [
+            1146.5,
+            358.5
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            290,
+            1451,
+            427
+          ],
+          "center_xy": [
+            1352.5,
+            358.5
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            1460,
+            290,
+            1657,
+            427
+          ],
+          "center_xy": [
+            1558.5,
+            358.5
+          ]
+        },
+        {
+          "index": 6,
+          "row": 0,
+          "column": 6,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1666,
+            290,
+            1863,
+            427
+          ],
+          "center_xy": [
+            1764.5,
+            358.5
+          ]
+        },
+        {
+          "index": 7,
+          "row": 0,
+          "column": 7,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1872,
+            290,
+            2069,
+            427
+          ],
+          "center_xy": [
+            1970.5,
+            358.5
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 0,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            430,
+            436,
+            627,
+            573
+          ],
+          "center_xy": [
+            528.5,
+            504.5
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 1,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            636,
+            436,
+            833,
+            573
+          ],
+          "center_xy": [
+            734.5,
+            504.5
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 2,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            842,
+            436,
+            1039,
+            573
+          ],
+          "center_xy": [
+            940.5,
+            504.5
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 3,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1048,
+            436,
+            1245,
+            573
+          ],
+          "center_xy": [
+            1146.5,
+            504.5
+          ]
+        },
+        {
+          "index": 12,
+          "row": 1,
+          "column": 4,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            436,
+            1451,
+            573
+          ],
+          "center_xy": [
+            1352.5,
+            504.5
+          ]
+        },
+        {
+          "index": 13,
+          "row": 1,
+          "column": 5,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1460,
+            436,
+            1657,
+            573
+          ],
+          "center_xy": [
+            1558.5,
+            504.5
+          ]
+        },
+        {
+          "index": 14,
+          "row": 1,
+          "column": 6,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            1666,
+            436,
+            1863,
+            573
+          ],
+          "center_xy": [
+            1764.5,
+            504.5
+          ]
+        },
+        {
+          "index": 15,
+          "row": 1,
+          "column": 7,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            436,
+            2069,
+            573
+          ],
+          "center_xy": [
+            1970.5,
+            504.5
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 0,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            430,
+            582,
+            627,
+            719
+          ],
+          "center_xy": [
+            528.5,
+            650.5
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 1,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            636,
+            582,
+            833,
+            719
+          ],
+          "center_xy": [
+            734.5,
+            650.5
+          ]
+        },
+        {
+          "index": 18,
+          "row": 2,
+          "column": 2,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            582,
+            1039,
+            719
+          ],
+          "center_xy": [
+            940.5,
+            650.5
+          ]
+        },
+        {
+          "index": 19,
+          "row": 2,
+          "column": 3,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1048,
+            582,
+            1245,
+            719
+          ],
+          "center_xy": [
+            1146.5,
+            650.5
+          ]
+        },
+        {
+          "index": 20,
+          "row": 2,
+          "column": 4,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            1254,
+            582,
+            1451,
+            719
+          ],
+          "center_xy": [
+            1352.5,
+            650.5
+          ]
+        },
+        {
+          "index": 21,
+          "row": 2,
+          "column": 5,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            1460,
+            582,
+            1657,
+            719
+          ],
+          "center_xy": [
+            1558.5,
+            650.5
+          ]
+        },
+        {
+          "index": 22,
+          "row": 2,
+          "column": 6,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1666,
+            582,
+            1863,
+            719
+          ],
+          "center_xy": [
+            1764.5,
+            650.5
+          ]
+        },
+        {
+          "index": 23,
+          "row": 2,
+          "column": 7,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1872,
+            582,
+            2069,
+            719
+          ],
+          "center_xy": [
+            1970.5,
+            650.5
+          ]
+        },
+        {
+          "index": 24,
+          "row": 3,
+          "column": 0,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            728,
+            627,
+            865
+          ],
+          "center_xy": [
+            528.5,
+            796.5
+          ]
+        },
+        {
+          "index": 25,
+          "row": 3,
+          "column": 1,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            636,
+            728,
+            833,
+            865
+          ],
+          "center_xy": [
+            734.5,
+            796.5
+          ]
+        },
+        {
+          "index": 26,
+          "row": 3,
+          "column": 2,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            842,
+            728,
+            1039,
+            865
+          ],
+          "center_xy": [
+            940.5,
+            796.5
+          ]
+        },
+        {
+          "index": 27,
+          "row": 3,
+          "column": 3,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            1048,
+            728,
+            1245,
+            865
+          ],
+          "center_xy": [
+            1146.5,
+            796.5
+          ]
+        },
+        {
+          "index": 28,
+          "row": 3,
+          "column": 4,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            728,
+            1451,
+            865
+          ],
+          "center_xy": [
+            1352.5,
+            796.5
+          ]
+        },
+        {
+          "index": 29,
+          "row": 3,
+          "column": 5,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            1460,
+            728,
+            1657,
+            865
+          ],
+          "center_xy": [
+            1558.5,
+            796.5
+          ]
+        },
+        {
+          "index": 30,
+          "row": 3,
+          "column": 6,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1666,
+            728,
+            1863,
+            865
+          ],
+          "center_xy": [
+            1764.5,
+            796.5
+          ]
+        },
+        {
+          "index": 31,
+          "row": 3,
+          "column": 7,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            728,
+            2069,
+            865
+          ],
+          "center_xy": [
+            1970.5,
+            796.5
+          ]
+        },
+        {
+          "index": 32,
+          "row": 4,
+          "column": 0,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            430,
+            874,
+            627,
+            1011
+          ],
+          "center_xy": [
+            528.5,
+            942.5
+          ]
+        },
+        {
+          "index": 33,
+          "row": 4,
+          "column": 1,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            636,
+            874,
+            833,
+            1011
+          ],
+          "center_xy": [
+            734.5,
+            942.5
+          ]
+        },
+        {
+          "index": 34,
+          "row": 4,
+          "column": 2,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            842,
+            874,
+            1039,
+            1011
+          ],
+          "center_xy": [
+            940.5,
+            942.5
+          ]
+        },
+        {
+          "index": 35,
+          "row": 4,
+          "column": 3,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            874,
+            1245,
+            1011
+          ],
+          "center_xy": [
+            1146.5,
+            942.5
+          ]
+        },
+        {
+          "index": 36,
+          "row": 4,
+          "column": 4,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1254,
+            874,
+            1451,
+            1011
+          ],
+          "center_xy": [
+            1352.5,
+            942.5
+          ]
+        },
+        {
+          "index": 37,
+          "row": 4,
+          "column": 5,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1460,
+            874,
+            1657,
+            1011
+          ],
+          "center_xy": [
+            1558.5,
+            942.5
+          ]
+        },
+        {
+          "index": 38,
+          "row": 4,
+          "column": 6,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            874,
+            1863,
+            1011
+          ],
+          "center_xy": [
+            1764.5,
+            942.5
+          ]
+        },
+        {
+          "index": 39,
+          "row": 4,
+          "column": 7,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            1872,
+            874,
+            2069,
+            1011
+          ],
+          "center_xy": [
+            1970.5,
+            942.5
+          ]
+        },
+        {
+          "index": 40,
+          "row": 5,
+          "column": 0,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            1020,
+            627,
+            1157
+          ],
+          "center_xy": [
+            528.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 41,
+          "row": 5,
+          "column": 1,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            636,
+            1020,
+            833,
+            1157
+          ],
+          "center_xy": [
+            734.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 42,
+          "row": 5,
+          "column": 2,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            842,
+            1020,
+            1039,
+            1157
+          ],
+          "center_xy": [
+            940.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 43,
+          "row": 5,
+          "column": 3,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            1020,
+            1245,
+            1157
+          ],
+          "center_xy": [
+            1146.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 44,
+          "row": 5,
+          "column": 4,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            1020,
+            1451,
+            1157
+          ],
+          "center_xy": [
+            1352.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 45,
+          "row": 5,
+          "column": 5,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            1020,
+            1657,
+            1157
+          ],
+          "center_xy": [
+            1558.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 46,
+          "row": 5,
+          "column": 6,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1666,
+            1020,
+            1863,
+            1157
+          ],
+          "center_xy": [
+            1764.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 47,
+          "row": 5,
+          "column": 7,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            1872,
+            1020,
+            2069,
+            1157
+          ],
+          "center_xy": [
+            1970.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 48,
+          "row": 6,
+          "column": 0,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            430,
+            1166,
+            627,
+            1303
+          ],
+          "center_xy": [
+            528.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 49,
+          "row": 6,
+          "column": 1,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            636,
+            1166,
+            833,
+            1303
+          ],
+          "center_xy": [
+            734.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 50,
+          "row": 6,
+          "column": 2,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            1166,
+            1039,
+            1303
+          ],
+          "center_xy": [
+            940.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 51,
+          "row": 6,
+          "column": 3,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1048,
+            1166,
+            1245,
+            1303
+          ],
+          "center_xy": [
+            1146.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 52,
+          "row": 6,
+          "column": 4,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            1254,
+            1166,
+            1451,
+            1303
+          ],
+          "center_xy": [
+            1352.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 53,
+          "row": 6,
+          "column": 5,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1460,
+            1166,
+            1657,
+            1303
+          ],
+          "center_xy": [
+            1558.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 54,
+          "row": 6,
+          "column": 6,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            1166,
+            1863,
+            1303
+          ],
+          "center_xy": [
+            1764.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 55,
+          "row": 6,
+          "column": 7,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1872,
+            1166,
+            2069,
+            1303
+          ],
+          "center_xy": [
+            1970.5,
+            1234.5
+          ]
+        }
+      ]
+    },
+    "B": {
+      "assignments": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            290,
+            627,
+            427
+          ],
+          "center_xy": [
+            528.5,
+            358.5
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            636,
+            290,
+            833,
+            427
+          ],
+          "center_xy": [
+            734.5,
+            358.5
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            842,
+            290,
+            1039,
+            427
+          ],
+          "center_xy": [
+            940.5,
+            358.5
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            1048,
+            290,
+            1245,
+            427
+          ],
+          "center_xy": [
+            1146.5,
+            358.5
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1254,
+            290,
+            1451,
+            427
+          ],
+          "center_xy": [
+            1352.5,
+            358.5
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            290,
+            1657,
+            427
+          ],
+          "center_xy": [
+            1558.5,
+            358.5
+          ]
+        },
+        {
+          "index": 6,
+          "row": 0,
+          "column": 6,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            1666,
+            290,
+            1863,
+            427
+          ],
+          "center_xy": [
+            1764.5,
+            358.5
+          ]
+        },
+        {
+          "index": 7,
+          "row": 0,
+          "column": 7,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            290,
+            2069,
+            427
+          ],
+          "center_xy": [
+            1970.5,
+            358.5
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 0,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            430,
+            436,
+            627,
+            573
+          ],
+          "center_xy": [
+            528.5,
+            504.5
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 1,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            636,
+            436,
+            833,
+            573
+          ],
+          "center_xy": [
+            734.5,
+            504.5
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 2,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            842,
+            436,
+            1039,
+            573
+          ],
+          "center_xy": [
+            940.5,
+            504.5
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 3,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1048,
+            436,
+            1245,
+            573
+          ],
+          "center_xy": [
+            1146.5,
+            504.5
+          ]
+        },
+        {
+          "index": 12,
+          "row": 1,
+          "column": 4,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1254,
+            436,
+            1451,
+            573
+          ],
+          "center_xy": [
+            1352.5,
+            504.5
+          ]
+        },
+        {
+          "index": 13,
+          "row": 1,
+          "column": 5,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            436,
+            1657,
+            573
+          ],
+          "center_xy": [
+            1558.5,
+            504.5
+          ]
+        },
+        {
+          "index": 14,
+          "row": 1,
+          "column": 6,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            436,
+            1863,
+            573
+          ],
+          "center_xy": [
+            1764.5,
+            504.5
+          ]
+        },
+        {
+          "index": 15,
+          "row": 1,
+          "column": 7,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            1872,
+            436,
+            2069,
+            573
+          ],
+          "center_xy": [
+            1970.5,
+            504.5
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 0,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            430,
+            582,
+            627,
+            719
+          ],
+          "center_xy": [
+            528.5,
+            650.5
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 1,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            636,
+            582,
+            833,
+            719
+          ],
+          "center_xy": [
+            734.5,
+            650.5
+          ]
+        },
+        {
+          "index": 18,
+          "row": 2,
+          "column": 2,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            842,
+            582,
+            1039,
+            719
+          ],
+          "center_xy": [
+            940.5,
+            650.5
+          ]
+        },
+        {
+          "index": 19,
+          "row": 2,
+          "column": 3,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            582,
+            1245,
+            719
+          ],
+          "center_xy": [
+            1146.5,
+            650.5
+          ]
+        },
+        {
+          "index": 20,
+          "row": 2,
+          "column": 4,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            582,
+            1451,
+            719
+          ],
+          "center_xy": [
+            1352.5,
+            650.5
+          ]
+        },
+        {
+          "index": 21,
+          "row": 2,
+          "column": 5,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1460,
+            582,
+            1657,
+            719
+          ],
+          "center_xy": [
+            1558.5,
+            650.5
+          ]
+        },
+        {
+          "index": 22,
+          "row": 2,
+          "column": 6,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            582,
+            1863,
+            719
+          ],
+          "center_xy": [
+            1764.5,
+            650.5
+          ]
+        },
+        {
+          "index": 23,
+          "row": 2,
+          "column": 7,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            1872,
+            582,
+            2069,
+            719
+          ],
+          "center_xy": [
+            1970.5,
+            650.5
+          ]
+        },
+        {
+          "index": 24,
+          "row": 3,
+          "column": 0,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            430,
+            728,
+            627,
+            865
+          ],
+          "center_xy": [
+            528.5,
+            796.5
+          ]
+        },
+        {
+          "index": 25,
+          "row": 3,
+          "column": 1,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            636,
+            728,
+            833,
+            865
+          ],
+          "center_xy": [
+            734.5,
+            796.5
+          ]
+        },
+        {
+          "index": 26,
+          "row": 3,
+          "column": 2,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            842,
+            728,
+            1039,
+            865
+          ],
+          "center_xy": [
+            940.5,
+            796.5
+          ]
+        },
+        {
+          "index": 27,
+          "row": 3,
+          "column": 3,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1048,
+            728,
+            1245,
+            865
+          ],
+          "center_xy": [
+            1146.5,
+            796.5
+          ]
+        },
+        {
+          "index": 28,
+          "row": 3,
+          "column": 4,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1254,
+            728,
+            1451,
+            865
+          ],
+          "center_xy": [
+            1352.5,
+            796.5
+          ]
+        },
+        {
+          "index": 29,
+          "row": 3,
+          "column": 5,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            728,
+            1657,
+            865
+          ],
+          "center_xy": [
+            1558.5,
+            796.5
+          ]
+        },
+        {
+          "index": 30,
+          "row": 3,
+          "column": 6,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1666,
+            728,
+            1863,
+            865
+          ],
+          "center_xy": [
+            1764.5,
+            796.5
+          ]
+        },
+        {
+          "index": 31,
+          "row": 3,
+          "column": 7,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1872,
+            728,
+            2069,
+            865
+          ],
+          "center_xy": [
+            1970.5,
+            796.5
+          ]
+        },
+        {
+          "index": 32,
+          "row": 4,
+          "column": 0,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            874,
+            627,
+            1011
+          ],
+          "center_xy": [
+            528.5,
+            942.5
+          ]
+        },
+        {
+          "index": 33,
+          "row": 4,
+          "column": 1,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            636,
+            874,
+            833,
+            1011
+          ],
+          "center_xy": [
+            734.5,
+            942.5
+          ]
+        },
+        {
+          "index": 34,
+          "row": 4,
+          "column": 2,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            874,
+            1039,
+            1011
+          ],
+          "center_xy": [
+            940.5,
+            942.5
+          ]
+        },
+        {
+          "index": 35,
+          "row": 4,
+          "column": 3,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            1048,
+            874,
+            1245,
+            1011
+          ],
+          "center_xy": [
+            1146.5,
+            942.5
+          ]
+        },
+        {
+          "index": 36,
+          "row": 4,
+          "column": 4,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            874,
+            1451,
+            1011
+          ],
+          "center_xy": [
+            1352.5,
+            942.5
+          ]
+        },
+        {
+          "index": 37,
+          "row": 4,
+          "column": 5,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            874,
+            1657,
+            1011
+          ],
+          "center_xy": [
+            1558.5,
+            942.5
+          ]
+        },
+        {
+          "index": 38,
+          "row": 4,
+          "column": 6,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1666,
+            874,
+            1863,
+            1011
+          ],
+          "center_xy": [
+            1764.5,
+            942.5
+          ]
+        },
+        {
+          "index": 39,
+          "row": 4,
+          "column": 7,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            874,
+            2069,
+            1011
+          ],
+          "center_xy": [
+            1970.5,
+            942.5
+          ]
+        },
+        {
+          "index": 40,
+          "row": 5,
+          "column": 0,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            430,
+            1020,
+            627,
+            1157
+          ],
+          "center_xy": [
+            528.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 41,
+          "row": 5,
+          "column": 1,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            636,
+            1020,
+            833,
+            1157
+          ],
+          "center_xy": [
+            734.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 42,
+          "row": 5,
+          "column": 2,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            842,
+            1020,
+            1039,
+            1157
+          ],
+          "center_xy": [
+            940.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 43,
+          "row": 5,
+          "column": 3,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            1048,
+            1020,
+            1245,
+            1157
+          ],
+          "center_xy": [
+            1146.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 44,
+          "row": 5,
+          "column": 4,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1254,
+            1020,
+            1451,
+            1157
+          ],
+          "center_xy": [
+            1352.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 45,
+          "row": 5,
+          "column": 5,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1460,
+            1020,
+            1657,
+            1157
+          ],
+          "center_xy": [
+            1558.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 46,
+          "row": 5,
+          "column": 6,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            1020,
+            1863,
+            1157
+          ],
+          "center_xy": [
+            1764.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 47,
+          "row": 5,
+          "column": 7,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            1020,
+            2069,
+            1157
+          ],
+          "center_xy": [
+            1970.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 48,
+          "row": 6,
+          "column": 0,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            1166,
+            627,
+            1303
+          ],
+          "center_xy": [
+            528.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 49,
+          "row": 6,
+          "column": 1,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            636,
+            1166,
+            833,
+            1303
+          ],
+          "center_xy": [
+            734.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 50,
+          "row": 6,
+          "column": 2,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            842,
+            1166,
+            1039,
+            1303
+          ],
+          "center_xy": [
+            940.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 51,
+          "row": 6,
+          "column": 3,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            1166,
+            1245,
+            1303
+          ],
+          "center_xy": [
+            1146.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 52,
+          "row": 6,
+          "column": 4,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1254,
+            1166,
+            1451,
+            1303
+          ],
+          "center_xy": [
+            1352.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 53,
+          "row": 6,
+          "column": 5,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            1460,
+            1166,
+            1657,
+            1303
+          ],
+          "center_xy": [
+            1558.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 54,
+          "row": 6,
+          "column": 6,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1666,
+            1166,
+            1863,
+            1303
+          ],
+          "center_xy": [
+            1764.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 55,
+          "row": 6,
+          "column": 7,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1872,
+            1166,
+            2069,
+            1303
+          ],
+          "center_xy": [
+            1970.5,
+            1234.5
+          ]
+        }
+      ]
+    },
+    "C": {
+      "assignments": [
+        {
+          "index": 0,
+          "row": 0,
+          "column": 0,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            430,
+            290,
+            627,
+            427
+          ],
+          "center_xy": [
+            528.5,
+            358.5
+          ]
+        },
+        {
+          "index": 1,
+          "row": 0,
+          "column": 1,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            636,
+            290,
+            833,
+            427
+          ],
+          "center_xy": [
+            734.5,
+            358.5
+          ]
+        },
+        {
+          "index": 2,
+          "row": 0,
+          "column": 2,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            842,
+            290,
+            1039,
+            427
+          ],
+          "center_xy": [
+            940.5,
+            358.5
+          ]
+        },
+        {
+          "index": 3,
+          "row": 0,
+          "column": 3,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            1048,
+            290,
+            1245,
+            427
+          ],
+          "center_xy": [
+            1146.5,
+            358.5
+          ]
+        },
+        {
+          "index": 4,
+          "row": 0,
+          "column": 4,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            1254,
+            290,
+            1451,
+            427
+          ],
+          "center_xy": [
+            1352.5,
+            358.5
+          ]
+        },
+        {
+          "index": 5,
+          "row": 0,
+          "column": 5,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            1460,
+            290,
+            1657,
+            427
+          ],
+          "center_xy": [
+            1558.5,
+            358.5
+          ]
+        },
+        {
+          "index": 6,
+          "row": 0,
+          "column": 6,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1666,
+            290,
+            1863,
+            427
+          ],
+          "center_xy": [
+            1764.5,
+            358.5
+          ]
+        },
+        {
+          "index": 7,
+          "row": 0,
+          "column": 7,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1872,
+            290,
+            2069,
+            427
+          ],
+          "center_xy": [
+            1970.5,
+            358.5
+          ]
+        },
+        {
+          "index": 8,
+          "row": 1,
+          "column": 0,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            430,
+            436,
+            627,
+            573
+          ],
+          "center_xy": [
+            528.5,
+            504.5
+          ]
+        },
+        {
+          "index": 9,
+          "row": 1,
+          "column": 1,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            636,
+            436,
+            833,
+            573
+          ],
+          "center_xy": [
+            734.5,
+            504.5
+          ]
+        },
+        {
+          "index": 10,
+          "row": 1,
+          "column": 2,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            436,
+            1039,
+            573
+          ],
+          "center_xy": [
+            940.5,
+            504.5
+          ]
+        },
+        {
+          "index": 11,
+          "row": 1,
+          "column": 3,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            436,
+            1245,
+            573
+          ],
+          "center_xy": [
+            1146.5,
+            504.5
+          ]
+        },
+        {
+          "index": 12,
+          "row": 1,
+          "column": 4,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            1254,
+            436,
+            1451,
+            573
+          ],
+          "center_xy": [
+            1352.5,
+            504.5
+          ]
+        },
+        {
+          "index": 13,
+          "row": 1,
+          "column": 5,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1460,
+            436,
+            1657,
+            573
+          ],
+          "center_xy": [
+            1558.5,
+            504.5
+          ]
+        },
+        {
+          "index": 14,
+          "row": 1,
+          "column": 6,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            436,
+            1863,
+            573
+          ],
+          "center_xy": [
+            1764.5,
+            504.5
+          ]
+        },
+        {
+          "index": 15,
+          "row": 1,
+          "column": 7,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            1872,
+            436,
+            2069,
+            573
+          ],
+          "center_xy": [
+            1970.5,
+            504.5
+          ]
+        },
+        {
+          "index": 16,
+          "row": 2,
+          "column": 0,
+          "patch_id": "B",
+          "source_rgb": [
+            0,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            582,
+            627,
+            719
+          ],
+          "center_xy": [
+            528.5,
+            650.5
+          ]
+        },
+        {
+          "index": 17,
+          "row": 2,
+          "column": 1,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            636,
+            582,
+            833,
+            719
+          ],
+          "center_xy": [
+            734.5,
+            650.5
+          ]
+        },
+        {
+          "index": 18,
+          "row": 2,
+          "column": 2,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            582,
+            1039,
+            719
+          ],
+          "center_xy": [
+            940.5,
+            650.5
+          ]
+        },
+        {
+          "index": 19,
+          "row": 2,
+          "column": 3,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1048,
+            582,
+            1245,
+            719
+          ],
+          "center_xy": [
+            1146.5,
+            650.5
+          ]
+        },
+        {
+          "index": 20,
+          "row": 2,
+          "column": 4,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            582,
+            1451,
+            719
+          ],
+          "center_xy": [
+            1352.5,
+            650.5
+          ]
+        },
+        {
+          "index": 21,
+          "row": 2,
+          "column": 5,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            582,
+            1657,
+            719
+          ],
+          "center_xy": [
+            1558.5,
+            650.5
+          ]
+        },
+        {
+          "index": 22,
+          "row": 2,
+          "column": 6,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1666,
+            582,
+            1863,
+            719
+          ],
+          "center_xy": [
+            1764.5,
+            650.5
+          ]
+        },
+        {
+          "index": 23,
+          "row": 2,
+          "column": 7,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            1872,
+            582,
+            2069,
+            719
+          ],
+          "center_xy": [
+            1970.5,
+            650.5
+          ]
+        },
+        {
+          "index": 24,
+          "row": 3,
+          "column": 0,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            430,
+            728,
+            627,
+            865
+          ],
+          "center_xy": [
+            528.5,
+            796.5
+          ]
+        },
+        {
+          "index": 25,
+          "row": 3,
+          "column": 1,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            636,
+            728,
+            833,
+            865
+          ],
+          "center_xy": [
+            734.5,
+            796.5
+          ]
+        },
+        {
+          "index": 26,
+          "row": 3,
+          "column": 2,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            842,
+            728,
+            1039,
+            865
+          ],
+          "center_xy": [
+            940.5,
+            796.5
+          ]
+        },
+        {
+          "index": 27,
+          "row": 3,
+          "column": 3,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            728,
+            1245,
+            865
+          ],
+          "center_xy": [
+            1146.5,
+            796.5
+          ]
+        },
+        {
+          "index": 28,
+          "row": 3,
+          "column": 4,
+          "patch_id": "Y",
+          "source_rgb": [
+            255,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            728,
+            1451,
+            865
+          ],
+          "center_xy": [
+            1352.5,
+            796.5
+          ]
+        },
+        {
+          "index": 29,
+          "row": 3,
+          "column": 5,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1460,
+            728,
+            1657,
+            865
+          ],
+          "center_xy": [
+            1558.5,
+            796.5
+          ]
+        },
+        {
+          "index": 30,
+          "row": 3,
+          "column": 6,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            1666,
+            728,
+            1863,
+            865
+          ],
+          "center_xy": [
+            1764.5,
+            796.5
+          ]
+        },
+        {
+          "index": 31,
+          "row": 3,
+          "column": 7,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            728,
+            2069,
+            865
+          ],
+          "center_xy": [
+            1970.5,
+            796.5
+          ]
+        },
+        {
+          "index": 32,
+          "row": 4,
+          "column": 0,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            430,
+            874,
+            627,
+            1011
+          ],
+          "center_xy": [
+            528.5,
+            942.5
+          ]
+        },
+        {
+          "index": 33,
+          "row": 4,
+          "column": 1,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            636,
+            874,
+            833,
+            1011
+          ],
+          "center_xy": [
+            734.5,
+            942.5
+          ]
+        },
+        {
+          "index": 34,
+          "row": 4,
+          "column": 2,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            842,
+            874,
+            1039,
+            1011
+          ],
+          "center_xy": [
+            940.5,
+            942.5
+          ]
+        },
+        {
+          "index": 35,
+          "row": 4,
+          "column": 3,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            874,
+            1245,
+            1011
+          ],
+          "center_xy": [
+            1146.5,
+            942.5
+          ]
+        },
+        {
+          "index": 36,
+          "row": 4,
+          "column": 4,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1254,
+            874,
+            1451,
+            1011
+          ],
+          "center_xy": [
+            1352.5,
+            942.5
+          ]
+        },
+        {
+          "index": 37,
+          "row": 4,
+          "column": 5,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1460,
+            874,
+            1657,
+            1011
+          ],
+          "center_xy": [
+            1558.5,
+            942.5
+          ]
+        },
+        {
+          "index": 38,
+          "row": 4,
+          "column": 6,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1666,
+            874,
+            1863,
+            1011
+          ],
+          "center_xy": [
+            1764.5,
+            942.5
+          ]
+        },
+        {
+          "index": 39,
+          "row": 4,
+          "column": 7,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1872,
+            874,
+            2069,
+            1011
+          ],
+          "center_xy": [
+            1970.5,
+            942.5
+          ]
+        },
+        {
+          "index": 40,
+          "row": 5,
+          "column": 0,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            430,
+            1020,
+            627,
+            1157
+          ],
+          "center_xy": [
+            528.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 41,
+          "row": 5,
+          "column": 1,
+          "patch_id": "K073",
+          "source_rgb": [
+            73,
+            73,
+            73
+          ],
+          "bbox_xyxy": [
+            636,
+            1020,
+            833,
+            1157
+          ],
+          "center_xy": [
+            734.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 42,
+          "row": 5,
+          "column": 2,
+          "patch_id": "K219",
+          "source_rgb": [
+            219,
+            219,
+            219
+          ],
+          "bbox_xyxy": [
+            842,
+            1020,
+            1039,
+            1157
+          ],
+          "center_xy": [
+            940.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 43,
+          "row": 5,
+          "column": 3,
+          "patch_id": "G",
+          "source_rgb": [
+            0,
+            255,
+            0
+          ],
+          "bbox_xyxy": [
+            1048,
+            1020,
+            1245,
+            1157
+          ],
+          "center_xy": [
+            1146.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 44,
+          "row": 5,
+          "column": 4,
+          "patch_id": "M",
+          "source_rgb": [
+            255,
+            0,
+            255
+          ],
+          "bbox_xyxy": [
+            1254,
+            1020,
+            1451,
+            1157
+          ],
+          "center_xy": [
+            1352.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 45,
+          "row": 5,
+          "column": 5,
+          "patch_id": "K000",
+          "source_rgb": [
+            0,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            1460,
+            1020,
+            1657,
+            1157
+          ],
+          "center_xy": [
+            1558.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 46,
+          "row": 5,
+          "column": 6,
+          "patch_id": "K182",
+          "source_rgb": [
+            182,
+            182,
+            182
+          ],
+          "bbox_xyxy": [
+            1666,
+            1020,
+            1863,
+            1157
+          ],
+          "center_xy": [
+            1764.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 47,
+          "row": 5,
+          "column": 7,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1872,
+            1020,
+            2069,
+            1157
+          ],
+          "center_xy": [
+            1970.5,
+            1088.5
+          ]
+        },
+        {
+          "index": 48,
+          "row": 6,
+          "column": 0,
+          "patch_id": "K036",
+          "source_rgb": [
+            36,
+            36,
+            36
+          ],
+          "bbox_xyxy": [
+            430,
+            1166,
+            627,
+            1303
+          ],
+          "center_xy": [
+            528.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 49,
+          "row": 6,
+          "column": 1,
+          "patch_id": "K109",
+          "source_rgb": [
+            109,
+            109,
+            109
+          ],
+          "bbox_xyxy": [
+            636,
+            1166,
+            833,
+            1303
+          ],
+          "center_xy": [
+            734.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 50,
+          "row": 6,
+          "column": 2,
+          "patch_id": "R",
+          "source_rgb": [
+            255,
+            0,
+            0
+          ],
+          "bbox_xyxy": [
+            842,
+            1166,
+            1039,
+            1303
+          ],
+          "center_xy": [
+            940.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 51,
+          "row": 6,
+          "column": 3,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1048,
+            1166,
+            1245,
+            1303
+          ],
+          "center_xy": [
+            1146.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 52,
+          "row": 6,
+          "column": 4,
+          "patch_id": "K146",
+          "source_rgb": [
+            146,
+            146,
+            146
+          ],
+          "bbox_xyxy": [
+            1254,
+            1166,
+            1451,
+            1303
+          ],
+          "center_xy": [
+            1352.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 53,
+          "row": 6,
+          "column": 5,
+          "patch_id": "C",
+          "source_rgb": [
+            0,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1460,
+            1166,
+            1657,
+            1303
+          ],
+          "center_xy": [
+            1558.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 54,
+          "row": 6,
+          "column": 6,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1666,
+            1166,
+            1863,
+            1303
+          ],
+          "center_xy": [
+            1764.5,
+            1234.5
+          ]
+        },
+        {
+          "index": 55,
+          "row": 6,
+          "column": 7,
+          "patch_id": "K255",
+          "source_rgb": [
+            255,
+            255,
+            255
+          ],
+          "bbox_xyxy": [
+            1872,
+            1166,
+            2069,
+            1303
+          ],
+          "center_xy": [
+            1970.5,
+            1234.5
+          ]
+        }
+      ]
+    }
+  },
+  "red_gray_ramp": {
+    "levels": [
+      0,
+      36,
+      73,
+      109,
+      146,
+      182,
+      219,
+      255
+    ],
+    "assignments": [
+      {
+        "index": 0,
+        "row": 0,
+        "column": 0,
+        "patch_id": "R109",
+        "source_rgb": [
+          109,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          430,
+          290,
+          627,
+          427
+        ],
+        "center_xy": [
+          528.5,
+          358.5
+        ]
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "column": 1,
+        "patch_id": "K036",
+        "source_rgb": [
+          36,
+          36,
+          36
+        ],
+        "bbox_xyxy": [
+          636,
+          290,
+          833,
+          427
+        ],
+        "center_xy": [
+          734.5,
+          358.5
+        ]
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "column": 2,
+        "patch_id": "R182",
+        "source_rgb": [
+          182,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          842,
+          290,
+          1039,
+          427
+        ],
+        "center_xy": [
+          940.5,
+          358.5
+        ]
+      },
+      {
+        "index": 3,
+        "row": 0,
+        "column": 3,
+        "patch_id": "K000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1048,
+          290,
+          1245,
+          427
+        ],
+        "center_xy": [
+          1146.5,
+          358.5
+        ]
+      },
+      {
+        "index": 4,
+        "row": 0,
+        "column": 4,
+        "patch_id": "R255",
+        "source_rgb": [
+          255,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1254,
+          290,
+          1451,
+          427
+        ],
+        "center_xy": [
+          1352.5,
+          358.5
+        ]
+      },
+      {
+        "index": 5,
+        "row": 0,
+        "column": 5,
+        "patch_id": "K036",
+        "source_rgb": [
+          36,
+          36,
+          36
+        ],
+        "bbox_xyxy": [
+          1460,
+          290,
+          1657,
+          427
+        ],
+        "center_xy": [
+          1558.5,
+          358.5
+        ]
+      },
+      {
+        "index": 6,
+        "row": 0,
+        "column": 6,
+        "patch_id": "R146",
+        "source_rgb": [
+          146,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1666,
+          290,
+          1863,
+          427
+        ],
+        "center_xy": [
+          1764.5,
+          358.5
+        ]
+      },
+      {
+        "index": 7,
+        "row": 0,
+        "column": 7,
+        "patch_id": "K109",
+        "source_rgb": [
+          109,
+          109,
+          109
+        ],
+        "bbox_xyxy": [
+          1872,
+          290,
+          2069,
+          427
+        ],
+        "center_xy": [
+          1970.5,
+          358.5
+        ]
+      },
+      {
+        "index": 8,
+        "row": 1,
+        "column": 0,
+        "patch_id": "R036",
+        "source_rgb": [
+          36,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          430,
+          436,
+          627,
+          573
+        ],
+        "center_xy": [
+          528.5,
+          504.5
+        ]
+      },
+      {
+        "index": 9,
+        "row": 1,
+        "column": 1,
+        "patch_id": "R255",
+        "source_rgb": [
+          255,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          636,
+          436,
+          833,
+          573
+        ],
+        "center_xy": [
+          734.5,
+          504.5
+        ]
+      },
+      {
+        "index": 10,
+        "row": 1,
+        "column": 2,
+        "patch_id": "R146",
+        "source_rgb": [
+          146,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          842,
+          436,
+          1039,
+          573
+        ],
+        "center_xy": [
+          940.5,
+          504.5
+        ]
+      },
+      {
+        "index": 11,
+        "row": 1,
+        "column": 3,
+        "patch_id": "K073",
+        "source_rgb": [
+          73,
+          73,
+          73
+        ],
+        "bbox_xyxy": [
+          1048,
+          436,
+          1245,
+          573
+        ],
+        "center_xy": [
+          1146.5,
+          504.5
+        ]
+      },
+      {
+        "index": 12,
+        "row": 1,
+        "column": 4,
+        "patch_id": "R073",
+        "source_rgb": [
+          73,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1254,
+          436,
+          1451,
+          573
+        ],
+        "center_xy": [
+          1352.5,
+          504.5
+        ]
+      },
+      {
+        "index": 13,
+        "row": 1,
+        "column": 5,
+        "patch_id": "K073",
+        "source_rgb": [
+          73,
+          73,
+          73
+        ],
+        "bbox_xyxy": [
+          1460,
+          436,
+          1657,
+          573
+        ],
+        "center_xy": [
+          1558.5,
+          504.5
+        ]
+      },
+      {
+        "index": 14,
+        "row": 1,
+        "column": 6,
+        "patch_id": "K219",
+        "source_rgb": [
+          219,
+          219,
+          219
+        ],
+        "bbox_xyxy": [
+          1666,
+          436,
+          1863,
+          573
+        ],
+        "center_xy": [
+          1764.5,
+          504.5
+        ]
+      },
+      {
+        "index": 15,
+        "row": 1,
+        "column": 7,
+        "patch_id": "R036",
+        "source_rgb": [
+          36,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1872,
+          436,
+          2069,
+          573
+        ],
+        "center_xy": [
+          1970.5,
+          504.5
+        ]
+      },
+      {
+        "index": 16,
+        "row": 2,
+        "column": 0,
+        "patch_id": "R182",
+        "source_rgb": [
+          182,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          430,
+          582,
+          627,
+          719
+        ],
+        "center_xy": [
+          528.5,
+          650.5
+        ]
+      },
+      {
+        "index": 17,
+        "row": 2,
+        "column": 1,
+        "patch_id": "K109",
+        "source_rgb": [
+          109,
+          109,
+          109
+        ],
+        "bbox_xyxy": [
+          636,
+          582,
+          833,
+          719
+        ],
+        "center_xy": [
+          734.5,
+          650.5
+        ]
+      },
+      {
+        "index": 18,
+        "row": 2,
+        "column": 2,
+        "patch_id": "R000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          842,
+          582,
+          1039,
+          719
+        ],
+        "center_xy": [
+          940.5,
+          650.5
+        ]
+      },
+      {
+        "index": 19,
+        "row": 2,
+        "column": 3,
+        "patch_id": "R036",
+        "source_rgb": [
+          36,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1048,
+          582,
+          1245,
+          719
+        ],
+        "center_xy": [
+          1146.5,
+          650.5
+        ]
+      },
+      {
+        "index": 20,
+        "row": 2,
+        "column": 4,
+        "patch_id": "R182",
+        "source_rgb": [
+          182,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1254,
+          582,
+          1451,
+          719
+        ],
+        "center_xy": [
+          1352.5,
+          650.5
+        ]
+      },
+      {
+        "index": 21,
+        "row": 2,
+        "column": 5,
+        "patch_id": "R255",
+        "source_rgb": [
+          255,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1460,
+          582,
+          1657,
+          719
+        ],
+        "center_xy": [
+          1558.5,
+          650.5
+        ]
+      },
+      {
+        "index": 22,
+        "row": 2,
+        "column": 6,
+        "patch_id": "R219",
+        "source_rgb": [
+          219,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1666,
+          582,
+          1863,
+          719
+        ],
+        "center_xy": [
+          1764.5,
+          650.5
+        ]
+      },
+      {
+        "index": 23,
+        "row": 2,
+        "column": 7,
+        "patch_id": "K182",
+        "source_rgb": [
+          182,
+          182,
+          182
+        ],
+        "bbox_xyxy": [
+          1872,
+          582,
+          2069,
+          719
+        ],
+        "center_xy": [
+          1970.5,
+          650.5
+        ]
+      },
+      {
+        "index": 24,
+        "row": 3,
+        "column": 0,
+        "patch_id": "R219",
+        "source_rgb": [
+          219,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          430,
+          728,
+          627,
+          865
+        ],
+        "center_xy": [
+          528.5,
+          796.5
+        ]
+      },
+      {
+        "index": 25,
+        "row": 3,
+        "column": 1,
+        "patch_id": "R255",
+        "source_rgb": [
+          255,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          636,
+          728,
+          833,
+          865
+        ],
+        "center_xy": [
+          734.5,
+          796.5
+        ]
+      },
+      {
+        "index": 26,
+        "row": 3,
+        "column": 2,
+        "patch_id": "R146",
+        "source_rgb": [
+          146,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          842,
+          728,
+          1039,
+          865
+        ],
+        "center_xy": [
+          940.5,
+          796.5
+        ]
+      },
+      {
+        "index": 27,
+        "row": 3,
+        "column": 3,
+        "patch_id": "R109",
+        "source_rgb": [
+          109,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1048,
+          728,
+          1245,
+          865
+        ],
+        "center_xy": [
+          1146.5,
+          796.5
+        ]
+      },
+      {
+        "index": 28,
+        "row": 3,
+        "column": 4,
+        "patch_id": "K219",
+        "source_rgb": [
+          219,
+          219,
+          219
+        ],
+        "bbox_xyxy": [
+          1254,
+          728,
+          1451,
+          865
+        ],
+        "center_xy": [
+          1352.5,
+          796.5
+        ]
+      },
+      {
+        "index": 29,
+        "row": 3,
+        "column": 5,
+        "patch_id": "R219",
+        "source_rgb": [
+          219,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1460,
+          728,
+          1657,
+          865
+        ],
+        "center_xy": [
+          1558.5,
+          796.5
+        ]
+      },
+      {
+        "index": 30,
+        "row": 3,
+        "column": 6,
+        "patch_id": "K146",
+        "source_rgb": [
+          146,
+          146,
+          146
+        ],
+        "bbox_xyxy": [
+          1666,
+          728,
+          1863,
+          865
+        ],
+        "center_xy": [
+          1764.5,
+          796.5
+        ]
+      },
+      {
+        "index": 31,
+        "row": 3,
+        "column": 7,
+        "patch_id": "R073",
+        "source_rgb": [
+          73,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1872,
+          728,
+          2069,
+          865
+        ],
+        "center_xy": [
+          1970.5,
+          796.5
+        ]
+      },
+      {
+        "index": 32,
+        "row": 4,
+        "column": 0,
+        "patch_id": "K255",
+        "source_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bbox_xyxy": [
+          430,
+          874,
+          627,
+          1011
+        ],
+        "center_xy": [
+          528.5,
+          942.5
+        ]
+      },
+      {
+        "index": 33,
+        "row": 4,
+        "column": 1,
+        "patch_id": "R073",
+        "source_rgb": [
+          73,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          636,
+          874,
+          833,
+          1011
+        ],
+        "center_xy": [
+          734.5,
+          942.5
+        ]
+      },
+      {
+        "index": 34,
+        "row": 4,
+        "column": 2,
+        "patch_id": "K036",
+        "source_rgb": [
+          36,
+          36,
+          36
+        ],
+        "bbox_xyxy": [
+          842,
+          874,
+          1039,
+          1011
+        ],
+        "center_xy": [
+          940.5,
+          942.5
+        ]
+      },
+      {
+        "index": 35,
+        "row": 4,
+        "column": 3,
+        "patch_id": "R182",
+        "source_rgb": [
+          182,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1048,
+          874,
+          1245,
+          1011
+        ],
+        "center_xy": [
+          1146.5,
+          942.5
+        ]
+      },
+      {
+        "index": 36,
+        "row": 4,
+        "column": 4,
+        "patch_id": "K255",
+        "source_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bbox_xyxy": [
+          1254,
+          874,
+          1451,
+          1011
+        ],
+        "center_xy": [
+          1352.5,
+          942.5
+        ]
+      },
+      {
+        "index": 37,
+        "row": 4,
+        "column": 5,
+        "patch_id": "R146",
+        "source_rgb": [
+          146,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1460,
+          874,
+          1657,
+          1011
+        ],
+        "center_xy": [
+          1558.5,
+          942.5
+        ]
+      },
+      {
+        "index": 38,
+        "row": 4,
+        "column": 6,
+        "patch_id": "R073",
+        "source_rgb": [
+          73,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1666,
+          874,
+          1863,
+          1011
+        ],
+        "center_xy": [
+          1764.5,
+          942.5
+        ]
+      },
+      {
+        "index": 39,
+        "row": 4,
+        "column": 7,
+        "patch_id": "K219",
+        "source_rgb": [
+          219,
+          219,
+          219
+        ],
+        "bbox_xyxy": [
+          1872,
+          874,
+          2069,
+          1011
+        ],
+        "center_xy": [
+          1970.5,
+          942.5
+        ]
+      },
+      {
+        "index": 40,
+        "row": 5,
+        "column": 0,
+        "patch_id": "R000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          430,
+          1020,
+          627,
+          1157
+        ],
+        "center_xy": [
+          528.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 41,
+        "row": 5,
+        "column": 1,
+        "patch_id": "R000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          636,
+          1020,
+          833,
+          1157
+        ],
+        "center_xy": [
+          734.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 42,
+        "row": 5,
+        "column": 2,
+        "patch_id": "K146",
+        "source_rgb": [
+          146,
+          146,
+          146
+        ],
+        "bbox_xyxy": [
+          842,
+          1020,
+          1039,
+          1157
+        ],
+        "center_xy": [
+          940.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 43,
+        "row": 5,
+        "column": 3,
+        "patch_id": "K255",
+        "source_rgb": [
+          255,
+          255,
+          255
+        ],
+        "bbox_xyxy": [
+          1048,
+          1020,
+          1245,
+          1157
+        ],
+        "center_xy": [
+          1146.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 44,
+        "row": 5,
+        "column": 4,
+        "patch_id": "R109",
+        "source_rgb": [
+          109,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1254,
+          1020,
+          1451,
+          1157
+        ],
+        "center_xy": [
+          1352.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 45,
+        "row": 5,
+        "column": 5,
+        "patch_id": "R036",
+        "source_rgb": [
+          36,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1460,
+          1020,
+          1657,
+          1157
+        ],
+        "center_xy": [
+          1558.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 46,
+        "row": 5,
+        "column": 6,
+        "patch_id": "K000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1666,
+          1020,
+          1863,
+          1157
+        ],
+        "center_xy": [
+          1764.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 47,
+        "row": 5,
+        "column": 7,
+        "patch_id": "K109",
+        "source_rgb": [
+          109,
+          109,
+          109
+        ],
+        "bbox_xyxy": [
+          1872,
+          1020,
+          2069,
+          1157
+        ],
+        "center_xy": [
+          1970.5,
+          1088.5
+        ]
+      },
+      {
+        "index": 48,
+        "row": 6,
+        "column": 0,
+        "patch_id": "R000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          430,
+          1166,
+          627,
+          1303
+        ],
+        "center_xy": [
+          528.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 49,
+        "row": 6,
+        "column": 1,
+        "patch_id": "K146",
+        "source_rgb": [
+          146,
+          146,
+          146
+        ],
+        "bbox_xyxy": [
+          636,
+          1166,
+          833,
+          1303
+        ],
+        "center_xy": [
+          734.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 50,
+        "row": 6,
+        "column": 2,
+        "patch_id": "K000",
+        "source_rgb": [
+          0,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          842,
+          1166,
+          1039,
+          1303
+        ],
+        "center_xy": [
+          940.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 51,
+        "row": 6,
+        "column": 3,
+        "patch_id": "K182",
+        "source_rgb": [
+          182,
+          182,
+          182
+        ],
+        "bbox_xyxy": [
+          1048,
+          1166,
+          1245,
+          1303
+        ],
+        "center_xy": [
+          1146.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 52,
+        "row": 6,
+        "column": 4,
+        "patch_id": "R219",
+        "source_rgb": [
+          219,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1254,
+          1166,
+          1451,
+          1303
+        ],
+        "center_xy": [
+          1352.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 53,
+        "row": 6,
+        "column": 5,
+        "patch_id": "R109",
+        "source_rgb": [
+          109,
+          0,
+          0
+        ],
+        "bbox_xyxy": [
+          1460,
+          1166,
+          1657,
+          1303
+        ],
+        "center_xy": [
+          1558.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 54,
+        "row": 6,
+        "column": 6,
+        "patch_id": "K073",
+        "source_rgb": [
+          73,
+          73,
+          73
+        ],
+        "bbox_xyxy": [
+          1666,
+          1166,
+          1863,
+          1303
+        ],
+        "center_xy": [
+          1764.5,
+          1234.5
+        ]
+      },
+      {
+        "index": 55,
+        "row": 6,
+        "column": 7,
+        "patch_id": "K182",
+        "source_rgb": [
+          182,
+          182,
+          182
+        ],
+        "bbox_xyxy": [
+          1872,
+          1166,
+          2069,
+          1303
+        ],
+        "center_xy": [
+          1970.5,
+          1234.5
+        ]
+      }
+    ]
+  },
+  "gb_slanted_edges": {
+    "cells": [
+      {
+        "index": 0,
+        "row": 0,
+        "column": 0,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "vertical_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          430,
+          290,
+          809,
+          514
+        ],
+        "center_xy": [
+          619.5,
+          402.0
+        ]
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "column": 1,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "vertical_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          850,
+          290,
+          1229,
+          514
+        ],
+        "center_xy": [
+          1039.5,
+          402.0
+        ]
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "column": 2,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "vertical_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1270,
+          290,
+          1649,
+          514
+        ],
+        "center_xy": [
+          1459.5,
+          402.0
+        ]
+      },
+      {
+        "index": 3,
+        "row": 0,
+        "column": 3,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "vertical_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1690,
+          290,
+          2069,
+          514
+        ],
+        "center_xy": [
+          1879.5,
+          402.0
+        ]
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "column": 0,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "horizontal_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          430,
+          555,
+          809,
+          779
+        ],
+        "center_xy": [
+          619.5,
+          667.0
+        ]
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "column": 1,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "horizontal_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          850,
+          555,
+          1229,
+          779
+        ],
+        "center_xy": [
+          1039.5,
+          667.0
+        ]
+      },
+      {
+        "index": 6,
+        "row": 1,
+        "column": 2,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "horizontal_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1270,
+          555,
+          1649,
+          779
+        ],
+        "center_xy": [
+          1459.5,
+          667.0
+        ]
+      },
+      {
+        "index": 7,
+        "row": 1,
+        "column": 3,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "horizontal_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1690,
+          555,
+          2069,
+          779
+        ],
+        "center_xy": [
+          1879.5,
+          667.0
+        ]
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "column": 0,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "vertical_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          430,
+          820,
+          809,
+          1044
+        ],
+        "center_xy": [
+          619.5,
+          932.0
+        ]
+      },
+      {
+        "index": 9,
+        "row": 2,
+        "column": 1,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "vertical_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          850,
+          820,
+          1229,
+          1044
+        ],
+        "center_xy": [
+          1039.5,
+          932.0
+        ]
+      },
+      {
+        "index": 10,
+        "row": 2,
+        "column": 2,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "vertical_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1270,
+          820,
+          1649,
+          1044
+        ],
+        "center_xy": [
+          1459.5,
+          932.0
+        ]
+      },
+      {
+        "index": 11,
+        "row": 2,
+        "column": 3,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "vertical_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1690,
+          820,
+          2069,
+          1044
+        ],
+        "center_xy": [
+          1879.5,
+          932.0
+        ]
+      },
+      {
+        "index": 12,
+        "row": 3,
+        "column": 0,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "horizontal_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          430,
+          1085,
+          809,
+          1309
+        ],
+        "center_xy": [
+          619.5,
+          1197.0
+        ]
+      },
+      {
+        "index": 13,
+        "row": 3,
+        "column": 1,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "horizontal_pos",
+        "slope": 0.12,
+        "bbox_xyxy": [
+          850,
+          1085,
+          1229,
+          1309
+        ],
+        "center_xy": [
+          1039.5,
+          1197.0
+        ]
+      },
+      {
+        "index": 14,
+        "row": 3,
+        "column": 2,
+        "color_id": "G",
+        "source_rgb": [
+          0,
+          255,
+          0
+        ],
+        "orientation": "horizontal_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1270,
+          1085,
+          1649,
+          1309
+        ],
+        "center_xy": [
+          1459.5,
+          1197.0
+        ]
+      },
+      {
+        "index": 15,
+        "row": 3,
+        "column": 3,
+        "color_id": "B",
+        "source_rgb": [
+          0,
+          0,
+          255
+        ],
+        "orientation": "horizontal_neg",
+        "slope": -0.12,
+        "bbox_xyxy": [
+          1690,
+          1085,
+          2069,
+          1309
+        ],
+        "center_xy": [
+          1879.5,
+          1197.0
+        ]
+      }
+    ]
+  }
+}

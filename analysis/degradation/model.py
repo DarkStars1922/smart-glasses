@@ -17,6 +17,7 @@ _IDENTITY_MATRIX = (
 )
 _ZERO_QUADRATIC = (0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
 _ONE_QUADRATIC = (1.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+_ZERO_GEOMETRIC_RESIDUAL = (_ZERO_QUADRATIC, _ZERO_QUADRATIC)
 
 
 def _flatten(values: Iterable[object]) -> Iterable[float]:
@@ -31,6 +32,9 @@ def _flatten(values: Iterable[object]) -> Iterable[float]:
 class DegradationParameters:
     output_size: tuple[int, int]
     homography: tuple[tuple[float, float, float], ...] = _IDENTITY_MATRIX
+    geometric_residual_coefficients: tuple[
+        tuple[float, float, float, float, float, float], ...
+    ] = _ZERO_GEOMETRIC_RESIDUAL
     attenuation_coefficients: tuple[tuple[float, float, float, float, float, float], ...] = (
         _ONE_QUADRATIC,
         _ONE_QUADRATIC,
@@ -47,6 +51,12 @@ class DegradationParameters:
     gain_rgb: tuple[float, float, float] = (1.0, 1.0, 1.0)
     bias_rgb: tuple[float, float, float] = (0.0, 0.0, 0.0)
     gamma_rgb: tuple[float, float, float] = (1.0, 1.0, 1.0)
+    tone_curve_levels: tuple[float, ...] = (0.0, 1.0)
+    tone_curve_rgb: tuple[tuple[float, ...], ...] = (
+        (0.0, 1.0),
+        (0.0, 1.0),
+        (0.0, 1.0),
+    )
     noise_slope: tuple[float, float, float] = (0.0, 0.0, 0.0)
     noise_intercept: tuple[float, float, float] = (0.0, 0.0, 0.0)
     jpeg_quality: int = 96
@@ -58,6 +68,7 @@ class DegradationParameters:
             raise ValueError("output_size values must be positive")
         numeric_fields = (
             self.homography,
+            self.geometric_residual_coefficients,
             self.attenuation_coefficients,
             self.background_coefficients,
             self.blur_fwhm_px,
@@ -66,6 +77,8 @@ class DegradationParameters:
             self.gain_rgb,
             self.bias_rgb,
             self.gamma_rgb,
+            self.tone_curve_levels,
+            self.tone_curve_rgb,
             self.noise_slope,
             self.noise_intercept,
         )
@@ -77,6 +90,8 @@ class DegradationParameters:
             raise ValueError("homography must be invertible")
         if np.asarray(self.color_matrix).shape != (3, 3):
             raise ValueError("color_matrix must be 3 x 3")
+        if np.asarray(self.geometric_residual_coefficients).shape != (2, 6):
+            raise ValueError("geometric_residual_coefficients must be 2 x 6")
         if np.asarray(self.attenuation_coefficients).shape != (3, 6):
             raise ValueError("attenuation_coefficients must be 3 x 6")
         if np.asarray(self.background_coefficients).shape != (3, 6):
@@ -85,6 +100,18 @@ class DegradationParameters:
             raise ValueError("blur FWHM must be nonnegative")
         if any(value <= 0.0 for value in self.gamma_rgb):
             raise ValueError("gamma values must be positive")
+        levels = np.asarray(self.tone_curve_levels, dtype=np.float64)
+        tone = np.asarray(self.tone_curve_rgb, dtype=np.float64)
+        if len(levels) < 2 or tone.shape != (3, len(levels)):
+            raise ValueError("tone curve must have shared levels and three channel rows")
+        if (
+            abs(float(levels[0])) > 1e-12
+            or abs(float(levels[-1]) - 1.0) > 1e-12
+            or np.any(np.diff(levels) <= 0.0)
+            or np.any((tone < 0.0) | (tone > 1.0))
+            or np.any(np.diff(tone, axis=1) < 0.0)
+        ):
+            raise ValueError("tone curve levels and channel values must be monotonic in [0, 1]")
         if any(value < 0.0 for value in self.noise_slope + self.noise_intercept):
             raise ValueError("noise variance coefficients must be nonnegative")
         if not 0 <= self.jpeg_quality <= 100:
@@ -139,6 +166,27 @@ def _quadratic_field(
     return np.einsum("hwk,ck->hwc", basis, np.asarray(coefficients, np.float32))
 
 
+def _apply_geometric_residual(
+    image: np.ndarray,
+    coefficients: tuple[tuple[float, float, float, float, float, float], ...],
+) -> np.ndarray:
+    if not any(abs(value) > 1e-12 for row in coefficients for value in row):
+        return image
+    height, width = image.shape[:2]
+    displacement = _quadratic_field(coefficients, width, height)
+    grid_y, grid_x = np.indices((height, width), dtype=np.float32)
+    map_x = grid_x - displacement[:, :, 0] * max(width - 1, 1)
+    map_y = grid_y - displacement[:, :, 1] * max(height - 1, 1)
+    return cv2.remap(
+        image,
+        map_x,
+        map_y,
+        interpolation=cv2.INTER_LINEAR,
+        borderMode=cv2.BORDER_CONSTANT,
+        borderValue=(0.0, 0.0, 0.0),
+    )
+
+
 def _anisotropic_kernel(fwhm_px: tuple[float, float], angle_deg: float) -> np.ndarray | None:
     sigma = np.asarray(fwhm_px, dtype=np.float64) / 2.354820045
     if float(sigma.max()) < 1e-6:
@@ -175,6 +223,17 @@ def _jpeg_roundtrip(image: np.ndarray, quality: int, subsampling: int) -> np.nda
         return np.asarray(decoded.convert("RGB"), dtype=np.float32) / 255.0
 
 
+def _apply_tone_curve(image: np.ndarray, params: DegradationParameters) -> np.ndarray:
+    levels = np.asarray(params.tone_curve_levels, dtype=np.float32)
+    tone = np.asarray(params.tone_curve_rgb, dtype=np.float32)
+    output = np.empty_like(image)
+    for channel in range(3):
+        output[:, :, channel] = np.interp(
+            image[:, :, channel], levels, tone[channel]
+        )
+    return output
+
+
 def degrade(
     image: np.ndarray,
     params: DegradationParameters,
@@ -203,26 +262,29 @@ def degrade(
         borderMode=cv2.BORDER_CONSTANT,
         borderValue=(0.0, 0.0, 0.0),
     )
-    attenuation = _quadratic_field(
-        params.attenuation_coefficients, output_width, output_height
+    degraded = _apply_geometric_residual(
+        degraded, params.geometric_residual_coefficients
     )
-    degraded *= np.maximum(attenuation, 0.0)
-
     kernel = _anisotropic_kernel(params.blur_fwhm_px, params.blur_angle_deg)
     if kernel is not None:
         degraded = cv2.filter2D(degraded, -1, kernel, borderType=cv2.BORDER_REFLECT_101)
 
-    degraded += _quadratic_field(
-        params.background_coefficients, output_width, output_height
-    )
     degraded = np.einsum(
         "hwc,oc->hwo", degraded, np.asarray(params.color_matrix, dtype=np.float32)
     )
-    degraded = degraded * np.asarray(params.gain_rgb, np.float32)
-    degraded += np.asarray(params.bias_rgb, np.float32)
     degraded = np.power(
         np.clip(degraded, 0.0, 1.0), np.asarray(params.gamma_rgb, np.float32)
     )
+    degraded = _apply_tone_curve(degraded, params)
+    attenuation = _quadratic_field(
+        params.attenuation_coefficients, output_width, output_height
+    )
+    degraded *= np.maximum(attenuation, 0.0)
+    degraded *= np.asarray(params.gain_rgb, np.float32)
+    degraded += _quadratic_field(
+        params.background_coefficients, output_width, output_height
+    )
+    degraded += np.asarray(params.bias_rgb, np.float32)
 
     slope = np.asarray(params.noise_slope, dtype=np.float32)
     intercept = np.asarray(params.noise_intercept, dtype=np.float32)
